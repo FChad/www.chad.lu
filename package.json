@@ -16,7 +16,6 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@iconify-json/heroicons-solid": "^1.2.1",
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/tailwindcss": "^6.13.1"
   }

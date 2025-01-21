@@ -3,23 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom CSS */
-body {
-    font-family: 'Poppins', sans-serif;
-    @apply bg-slate-100 text-slate-900;
-    @apply dark:bg-slate-900 dark:text-slate-100;
-}
-
-.toggleThemeButton {
-    @apply bg-slate-300 dark:bg-slate-700;
-    @apply h-8 w-8 flex items-center justify-center rounded-lg;
-    @apply transition-colors duration-200;
-}
-
-nav {
-    @apply bg-slate-300 bg-opacity-75 border-slate-300 border-[1px] border-opacity-70;
-    @apply dark:bg-slate-700 dark:bg-opacity-75 dark:border-slate-700 dark:text-slate-300;
-    @apply uppercase;
-    @apply block w-full max-w-screen-xl px-4 py-2 mx-auto fixed left-[50%] translate-x-[-50%] top-1 shadow lg:px-8 lg:py-1 backdrop-blur-lg backdrop-saturate-150 z-[9999] rounded-lg;
-}
