@@ -6,6 +6,7 @@ export default {
     './layouts/**/*.{vue,js,ts}', // Layout-Dateien
     './app.vue', // Haupt-App Datei
   ],
+  darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
     extend: {},
   },
