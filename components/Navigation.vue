@@ -21,12 +21,7 @@
                 </ul>
             </div>
             <div class="flex gap-2">
-                <client-only>
-                    <ThemeSwitcher />
-                </client-only>
-                <button class="h-8 w-8 lg:hidden toggleColorMode" type="button">
-                    <Icon name="i-heroicons-bars-3"></Icon>
-                </button>
+                <ThemeSwitcher />
             </div>
         </div>
     </nav>

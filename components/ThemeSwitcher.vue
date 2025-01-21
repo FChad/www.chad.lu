@@ -1,24 +1,18 @@
 <script setup>
+const colorMode = useColorMode()
 
-const colorMode = ref(localStorage.getItem('colorMode') || 'light')
-
-const toggleColorMode = () => {
-    colorMode.value = colorMode.value === 'dark' ? 'light' : 'dark'
-    localStorage.setItem('colorMode', colorMode.value)
+const toggleTheme = () => {
+    colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
 }
-
-watchEffect(() => {
-    document.documentElement.setAttribute('data-theme', colorMode.value)
-})
 </script>
 
 <template>
-    <button class="toggleColorMode" @click="toggleColorMode">
+    <button class="toggleThemeButton" @click="toggleTheme">
         <template v-if="colorMode.value === 'dark'">
-            <Icon name="i-heroicons-moon-20-solid" />
+            <Icon name="i-heroicons-sun-20-solid" />
         </template>
         <template v-else>
-            <Icon name="i-heroicons-sun-20-solid" />
+            <Icon name="i-heroicons-moon-20-solid" />
         </template>
     </button>
 </template>
