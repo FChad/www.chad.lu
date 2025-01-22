@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div class="container flex flex-wrap gap-2 items-center mx-auto p-1 flex-col md:flex-row">
+        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto p-1 flex-col md:flex-row">
             <div class="flex-1">
                 <div class="flex items-center">
                     <h1>
