@@ -6,7 +6,7 @@
     <div class="w-full h-full flex flex-col overflow-y-auto">
         <div class="w-full min-h-full flex items-center justify-center bg-neutral-700">
             <img src="/img/luxemburg.jpg" alt=""
-                class="absolute bg-cover w-[110%] max-w-[110%] h-auto brightness-150 dark:brightness-75 blur-[7px] opacity-60">
+                class="absolute bg-cover w-full h-full brightness-150 dark:brightness-75 blur-[7px] opacity-60 object-cover">
             <div class="flex flex-col items-center justify-center w-full h-full z-10">
                 <div class="flex flex-col gap-10 items-center justify-center overflow-hidden">
                     <h1 class="flex flex-col w-full gap-4 items-center justify-center font-bold text-white ">
@@ -49,10 +49,5 @@
 </template>
 
 <style lang="css" scoped>
-.background-section {
-    /* background-image: url('https://picsum.photos/1280/720'); */
-    @apply bg-cover bg-center w-full h-full;
-    @apply min-h-[500px];
-    @apply rounded-2xl p-4 flex items-center justify-center;
-}
+
 </style>
