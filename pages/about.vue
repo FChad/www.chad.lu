@@ -116,8 +116,121 @@
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="w-full h-full flex flex-col lg:flex-row justify-between items-center gap-4">
                     <div
-                        class="flex-1 flex flex-col lg:flex-row flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
-                        Zeitstrahl
+                        class="flex-1 flex flex-col flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
+                        <div>
+                            <h3 class="font-bold opacity-75">Zeitstrahl</h3>
+                        </div>
+                        <!-- Timeline -->
+                        <div>
+                            <div class="flex gap-x-3">
+                                <div class="w-16 text-end">
+                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2024</span>
+                                </div>
+                                <div
+                                    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
+                                    <div class="relative z-10 size-7 flex justify-center items-center">
+                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
+                                    </div>
+                                </div>
+                                <div class="grow pt-0.5 pb-8">
+                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+                                        Web-Entwickler bei Rotyre SARL</h3>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Verantwortlich für
+                                        die
+                                        Wartung und Weiterentwicklung der Webseite <em>mullerpneus.lu</em>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-x-3">
+                                <div class="w-16 text-end">
+                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2023</span>
+                                </div>
+                                <div
+                                    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
+                                    <div class="relative z-10 size-7 flex justify-center items-center">
+                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
+                                    </div>
+                                </div>
+                                <div class="grow pt-0.5 pb-8">
+                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+                                        Zertifizierung: Allgemeine Eignungsprüfung</h3>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Erfolgreicher
+                                        Abschluss
+                                        der staatlichen Prüfung für den öffentlichen Sektor.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-x-3">
+                                <div class="w-16 text-end">
+                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2021</span>
+                                </div>
+                                <div
+                                    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
+                                    <div class="relative z-10 size-7 flex justify-center items-center">
+                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
+                                    </div>
+                                </div>
+                                <div class="grow pt-0.5 pb-8">
+                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">Diplom in
+                                        Cloud Computing (BTS)</h3>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Höherer technischer
+                                        Abschluss im Bereich Cloud Computing am Lycée Guillaume Kroll.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-x-3">
+                                <div class="w-16 text-end">
+                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2020</span>
+                                </div>
+                                <div
+                                    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
+                                    <div class="relative z-10 size-7 flex justify-center items-center">
+                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
+                                    </div>
+                                </div>
+                                <div class="grow pt-0.5 pb-8">
+                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">Ferienjob
+                                        als
+                                        IT-Techniker</h3>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Tätigkeit am Lycée
+                                        Guillaume Kroll: Installation von MIXvoip-Telefonen, Netzwerkmanagement.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-x-3">
+                                <div class="w-16 text-end">
+                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2019</span>
+                                </div>
+                                <div
+                                    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
+                                    <div class="relative z-10 size-7 flex justify-center items-center">
+                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
+                                    </div>
+                                </div>
+                                <div class="grow pt-0.5 pb-8">
+                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">Diplom
+                                        als
+                                        IT-Techniker</h3>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Abschluss am Lycée
+                                        Guillaume Kroll in Esch-sur-Alzette mit der Bewertung "Gut".</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="w-full h-full flex flex-col lg:flex-row justify-between items-center gap-4">
+                    <div
+                        class="flex-1 flex flex-col flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
+                        <div>
+                            <h3 class="font-bold opacity-75">Besondere Ereignisse</h3>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li>Flug mit einem Helikoper</li>
+                                <li>Fallschirmsprung 4000 Meter über Luxembourg</li>
+                                <li>Tomorrowland 2025</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

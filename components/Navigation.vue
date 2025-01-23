@@ -17,7 +17,7 @@
                 <ul class="flex justify-around items-center gap-x-2 flex-col sm:flex-row">
                     <li v-for="link in navLinks" :key="link.name" class="flex items-center text-base font-semibold">
                         <NuxtLink :to="link.to" active-class="text-blue-400 dark:text-blue-400"
-                            class="flex items-center px-2 py-1 gap-x-1 rounded-xl hover:dark:bg-slate-800 hover:bg-slate-200">
+                            class="flex items-center px-2 py-1 gap-x-1 rounded-xl hover:dark:bg-slate-700 hover:bg-slate-200">
                             <Icon :name="link.icon" size="20"></Icon>
                             {{ link.name }}
                         </NuxtLink>
