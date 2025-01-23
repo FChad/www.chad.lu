@@ -1,6 +1,6 @@
 <template>
-    <nav>
-        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto p-1 flex-col md:flex-row">
+    <nav class="bg-white dark:bg-slate-800 z-10">
+        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto p-1 flex-col lg:flex-row">
             <div class="flex-1">
                 <div class="flex items-center">
                     <h1>
@@ -46,6 +46,7 @@
 <script setup>
 const navLinks = [
     { name: 'Home', to: '/', icon: 'material-symbols-light:family-home' },
+    { name: 'About', to: '/about', icon: 'material-symbols-light:person' },
     { name: 'Skills', to: '/skills', icon: 'material-symbols-light:book-2' },
     { name: 'Projects', to: '/projects', icon: 'material-symbols-light:folder' },
     { name: 'Contact', to: '/contact', icon: 'material-symbols-light:mail' }
