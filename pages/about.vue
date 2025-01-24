@@ -14,17 +14,17 @@
                         <div class="text-xl font-bold">Feierstein Chad</div>
                     </div>
                 </div>
-                <div class="flex-1 flex flex-row items-center gap-2">
-                    <div class="badge p-2">
+                <div class="flex-1 flex flex-col sm:flex-row items-center gap-2">
+                    <div class="badge text-center sm:text-left p-2">
                         <span class="label opacity-75">Nationality:</span><br>Luxembourgish
                     </div>
-                    <div class="badge p-2">
+                    <div class="badge text-center sm:text-left p-2">
                         <span class="label opacity-75">Residence:</span><br>Rumelange
                     </div>
-                    <div class="badge p-2">
+                    <div class="badge text-center sm:text-left p-2">
                         <span class="label opacity-75">Marital Status:</span><br>Single
                     </div>
-                    <div class="badge p-2">
+                    <div class="badge text-center sm:text-left p-2">
                         <span class="label opacity-75">Age:</span><br>25 years
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                         <div>
                             <h3 class="font-bold opacity-75">Zeitstrahl</h3>
                         </div>
-                        
+
                         <!-- Timeline -->
                         <div class="mx-auto">
                             <div class="flex gap-x-3">

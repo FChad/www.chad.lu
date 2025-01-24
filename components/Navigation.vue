@@ -13,7 +13,7 @@
                     </h1>
                 </div>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 hidden md:block">
                 <ul class="flex justify-around items-center gap-x-2 flex-col sm:flex-row">
                     <li v-for="link in navLinks" :key="link.name" class="flex items-center text-base font-semibold">
                         <NuxtLink :to="link.to" active-class="text-blue-400 dark:text-blue-400"
