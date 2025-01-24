@@ -15,17 +15,17 @@
                     </div>
                 </div>
                 <div class="flex-1 flex flex-row items-center gap-2">
-                    <div class="badge bg-white dark:bg-slate-700 p-2 rounded-lg">
-                        <span class="label font-bold  opacity-75">Nationality:</span><br>Luxembourgish
+                    <div class="badge p-2">
+                        <span class="label opacity-75">Nationality:</span><br>Luxembourgish
                     </div>
-                    <div class="badge bg-white dark:bg-slate-700 p-2 rounded-lg">
-                        <span class="label font-bold  opacity-75">Residence:</span><br>Rumelange
+                    <div class="badge p-2">
+                        <span class="label opacity-75">Residence:</span><br>Rumelange
                     </div>
-                    <div class="badge bg-white dark:bg-slate-700 p-2 rounded-lg">
-                        <span class="label font-bold  opacity-75">Marital Status:</span><br>Single
+                    <div class="badge p-2">
+                        <span class="label opacity-75">Marital Status:</span><br>Single
                     </div>
-                    <div class="badge bg-white dark:bg-slate-700 p-2 rounded-lg">
-                        <span class="label font-bold  opacity-75">Age:</span><br>25 years
+                    <div class="badge p-2">
+                        <span class="label opacity-75">Age:</span><br>25 years
                     </div>
                 </div>
             </div>
@@ -115,8 +115,7 @@
 
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="w-full h-full flex flex-col lg:flex-row justify-between items-center gap-4">
-                    <div
-                        class="flex-1 flex flex-col flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
+                    <div class="flex-1 flex flex-col flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
                         <div>
                             <h3 class="font-bold opacity-75">Zeitstrahl</h3>
                         </div>
@@ -124,25 +123,24 @@
                         <div>
                             <div class="flex gap-x-3">
                                 <div class="w-16 text-end">
-                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2024</span>
+                                    <span class="text-xs opacity-75">2024</span>
                                 </div>
                                 <div
                                     class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
                                     <div class="relative z-10 size-7 flex justify-center items-center">
-                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
+                                        <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200 animate-blink"></div>
                                     </div>
                                 </div>
                                 <div class="grow pt-0.5 pb-8">
-                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
-                                        Web-Entwickler bei Rotyre SARL</h3>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Verantwortlich für
+                                    <h3 class="flex gap-x-1.5 font-semibold">Web-Entwickler bei Rotyre SARL</h3>
+                                    <p class="mt-1 text-sm opacity-75">Verantwortlich für
                                         die
                                         Wartung und Weiterentwicklung der Webseite <em>mullerpneus.lu</em>.</p>
                                 </div>
                             </div>
                             <div class="flex gap-x-3">
                                 <div class="w-16 text-end">
-                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2023</span>
+                                    <span class="text-xs opacity-75">2023</span>
                                 </div>
                                 <div
                                     class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
@@ -151,16 +149,16 @@
                                     </div>
                                 </div>
                                 <div class="grow pt-0.5 pb-8">
-                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
-                                        Zertifizierung: Allgemeine Eignungsprüfung</h3>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Erfolgreicher
+                                    <h3 class="flex gap-x-1.5 font-semibold">Zertifizierung: Allgemeine Eignungsprüfung
+                                    </h3>
+                                    <p class="mt-1 text-sm opacity-75">Erfolgreicher
                                         Abschluss
                                         der staatlichen Prüfung für den öffentlichen Sektor.</p>
                                 </div>
                             </div>
                             <div class="flex gap-x-3">
                                 <div class="w-16 text-end">
-                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2021</span>
+                                    <span class="text-xs opacity-75">2021</span>
                                 </div>
                                 <div
                                     class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
@@ -169,15 +167,15 @@
                                     </div>
                                 </div>
                                 <div class="grow pt-0.5 pb-8">
-                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">Diplom in
+                                    <h3 class="flex gap-x-1.5 font-semibold">Diplom in
                                         Cloud Computing (BTS)</h3>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Höherer technischer
+                                    <p class="mt-1 text-sm opacity-75">Höherer technischer
                                         Abschluss im Bereich Cloud Computing am Lycée Guillaume Kroll.</p>
                                 </div>
                             </div>
                             <div class="flex gap-x-3">
                                 <div class="w-16 text-end">
-                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2020</span>
+                                    <span class="text-xs opacity-75">2020</span>
                                 </div>
                                 <div
                                     class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
@@ -186,28 +184,24 @@
                                     </div>
                                 </div>
                                 <div class="grow pt-0.5 pb-8">
-                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">Ferienjob
-                                        als
-                                        IT-Techniker</h3>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Tätigkeit am Lycée
+                                    <h3 class="flex gap-x-1.5 font-semibold">Ferienjob als IT-Techniker</h3>
+                                    <p class="mt-1 text-sm opacity-75">Tätigkeit am Lycée
                                         Guillaume Kroll: Installation von MIXvoip-Telefonen, Netzwerkmanagement.</p>
                                 </div>
                             </div>
                             <div class="flex gap-x-3">
                                 <div class="w-16 text-end">
-                                    <span class="text-xs text-gray-500 dark:text-neutral-400">2019</span>
+                                    <span class="text-xs opacity-75">2019</span>
                                 </div>
                                 <div
-                                    class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-slate-800 dark:after:bg-slate-200">
+                                    class="relative">
                                     <div class="relative z-10 size-7 flex justify-center items-center">
                                         <div class="size-2 rounded-full bg-slate-800 dark:bg-slate-200"></div>
                                     </div>
                                 </div>
                                 <div class="grow pt-0.5 pb-8">
-                                    <h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">Diplom
-                                        als
-                                        IT-Techniker</h3>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">Abschluss am Lycée
+                                    <h3 class="flex gap-x-1.5 font-semibold">Diplom als IT-Techniker</h3>
+                                    <p class="mt-1 text-sm opacity-75">Abschluss am Lycée
                                         Guillaume Kroll in Esch-sur-Alzette mit der Bewertung "Gut".</p>
                                 </div>
                             </div>
@@ -218,10 +212,9 @@
 
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="w-full h-full flex flex-col lg:flex-row justify-between items-center gap-4">
-                    <div
-                        class="flex-1 flex flex-col flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
+                    <div class="flex-1 flex flex-col flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
                         <div>
-                            <h3 class="font-bold opacity-75">Besondere Ereignisse</h3>
+                            <h3 class="font-bold opacity-75">Besondere Erlebnisse</h3>
                         </div>
 
                         <div>
@@ -238,4 +231,19 @@
     </div>
 </template>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        background-color: green;
+    }
+    50% {
+        opacity: 0.25;
+        background-color: green;
+    }
+}
+
+.animate-blink {
+    animation: blink 2s infinite;
+}
+</style>

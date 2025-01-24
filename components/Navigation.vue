@@ -17,7 +17,7 @@
                 <ul class="flex justify-around items-center gap-x-2 flex-col sm:flex-row">
                     <li v-for="link in navLinks" :key="link.name" class="flex items-center text-base font-semibold">
                         <NuxtLink :to="link.to" active-class="text-blue-400 dark:text-blue-400"
-                            class="flex items-center px-2 py-1 gap-x-1 rounded-xl hover:dark:bg-slate-700 hover:bg-slate-200">
+                            class="flex items-center px-2 py-1 gap-x-1 rounded-xl hover:dark:bg-slate-700 hover:bg-slate-100">
                             <Icon :name="link.icon" size="20"></Icon>
                             {{ link.name }}
                         </NuxtLink>
@@ -28,7 +28,7 @@
                 <div class="flex gap-2 ml-auto">
                     <div class="h-7 w-7">
                         <button
-                            class="bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-300 h-full w-full flex items-center justify-center rounded-lg transition-colors duration-200">
+                            class="bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 h-full w-full flex items-center justify-center rounded-lg">
                             <Icon name="material-symbols:translate" />
                         </button>
                     </div>
