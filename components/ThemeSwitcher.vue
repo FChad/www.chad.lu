@@ -2,11 +2,11 @@
 const colorMode = useColorMode()
 
 const toggleTheme = () => {
-    colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 watch(colorMode, () => {
-    console.log(colorMode.value.toLowerCase() === 'dark' ? 'material-symbols-light:sunny' : 'material-symbols:dark-mode-rounded');
-
+    console.log(colorMode.preference);
+    console.log(colorMode.value);
 })
 </script>
 
