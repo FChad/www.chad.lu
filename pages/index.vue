@@ -20,7 +20,7 @@
                             page!
                         </span>
                     </h1>
-                    <div class="w-full max-w-[50%]">
+                    <div class="w-full max-w-[80%] md:max-w-[50%]">
                         <div class="flex flex-col items-center gap-5 rounded-lg p-3 font-bold">
                             <p class="text-md  text-center text-white">
                                 Here, you will find a showcase of my work, skills, and projects. Feel free to explore
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute z-0 w-[110%] h-[110%] dark:bg-slate-900 dark:text-slate-300;">
+            <div class="absolute z-0 w-[110%] h-[110%] bg-slate-900 dark:text-slate-300;">
                 <img src="/img/luxemburg.jpg" alt=""
                     class="bg-cover w-full h-full brightness-125 dark:brightness-75 blur-[7px] opacity-90 object-cover z-0">
             </div>

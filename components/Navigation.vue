@@ -11,11 +11,27 @@
                     </a>
                 </h1>
 
-                <div class="block md:hidden h-7 w-7">
-                    <button @click="handleModal"
-                        class="bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 h-full w-full items-center justify-center rounded-lg">
-                        <Icon name="material-symbols:menu" />
-                    </button>
+                <div class="block md:hidden">
+                    <div class="flex gap-2 ml-auto">
+                        <div class="h-7 w-7">
+                            <button
+                                class="bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 h-full w-full flex items-center justify-center rounded-lg">
+                                <Icon name="material-symbols:translate" />
+                            </button>
+                        </div>
+                        <div class="h-7 w-7">
+                            <ClientOnly>
+                                <ThemeSwitcher />
+                            </ClientOnly>
+                        </div>
+
+                        <div class="h-7 w-7">
+                            <button @click="handleModal"
+                                class="bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 h-full w-full flex items-center justify-center rounded-lg">
+                                <Icon name="material-symbols:menu" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -59,19 +75,7 @@
                 </ul>
             </template>
             <template #footer>
-                <div class="flex justify-center items-center gap-2">
-                    <div class="h-7 w-7">
-                        <button
-                            class="bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 h-full w-full flex items-center justify-center rounded-lg">
-                            <Icon name="material-symbols:translate" />
-                        </button>
-                    </div>
-                    <div class="h-7 w-7">
-                        <ClientOnly>
-                            <ThemeSwitcher />
-                        </ClientOnly>
-                    </div>
-                </div>
+
             </template>
         </Modal>
     </nav>
