@@ -1,5 +1,5 @@
 <template>
-    <div class="w-screen h-screen flex flex-col relative overflow-hidden">
+    <div class="w-screen h-screen flex flex-col overflow-hidden">
         <Navigation />
         <NuxtPage />
     </div>

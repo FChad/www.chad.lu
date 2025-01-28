@@ -3,11 +3,9 @@
 </script>
 
 <template>
-    <div class="w-full h-full flex flex-col overflow-y-auto">
-        <div class="w-full min-h-full flex items-center justify-center bg-neutral-700">
-            <img src="/img/luxemburg.jpg" alt=""
-                class="absolute bg-cover w-full h-full brightness-150 dark:brightness-75 blur-[7px] opacity-60 object-cover">
-            <div class="flex flex-col items-center justify-center w-full h-full z-10">
+    <div class="w-full h-full flex flex-col overflow-hidden relative">
+        <div class="w-full min-h-full flex items-center justify-center ">
+            <div class="flex flex-col items-center justify-center w-full h-full z-[1] overflow-hidden">
                 <div class="flex flex-col gap-10 items-center justify-center overflow-hidden">
                     <h1 class="flex flex-col w-full gap-4 items-center justify-center font-bold text-white ">
                         <span class="text-xl lg:text-3xl uppercase">
@@ -44,10 +42,12 @@
                     </div>
                 </div>
             </div>
+            <div class="absolute z-0 w-[110%] h-[110%] dark:bg-slate-900 dark:text-slate-300;">
+                <img src="/img/luxemburg.jpg" alt=""
+                    class="bg-cover w-full h-full brightness-125 dark:brightness-75 blur-[7px] opacity-90 object-cover z-0">
+            </div>
         </div>
     </div>
 </template>
 
-<style lang="css" scoped>
-
-</style>
+<style lang="css" scoped></style>
