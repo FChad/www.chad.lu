@@ -4,7 +4,7 @@
 
 <template>
     <div class="h-full w-full z-10 overflow-y-auto">
-        <div class="max-w-7xl h-full w-full mx-auto px-1 py-4 font-semibold flex flex-col gap-4">
+        <div class="max-w-7xl h-full w-full mx-auto px-4 md:px-1 py-4 font-semibold flex flex-col gap-4">
             <h2 class="text-xl font-bold">Contact</h2>
             <form class="mt-8 space-y-6">
                 <div>

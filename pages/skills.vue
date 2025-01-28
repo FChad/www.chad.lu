@@ -102,7 +102,7 @@ const skills = [
 <template>
     <div class="h-full w-full z-10 overflow-y-auto">
         <div class="max-w-7xl h-full w-full mx-auto">
-            <div class="px-1 py-4 font-semibold flex flex-col gap-4">
+            <div class="px-4 md:px-1 py-4 font-semibold flex flex-col gap-4">
                 <div class="flex flex-col gap-2">
                     <div class="flex gap-2">
                         <div class="text-xl font-bold">{{ certifications.title }}</div>
@@ -125,9 +125,6 @@ const skills = [
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="px-1 py-4 font-semibold flex flex-col gap-4">
                 <div v-for="category in skills" :key="category.title" class="flex flex-col gap-2">
                     <div class="flex gap-2">
                         <div class="text-xl font-bold">{{ category.title }}</div>
@@ -141,6 +138,7 @@ const skills = [
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>

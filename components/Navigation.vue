@@ -1,6 +1,6 @@
 <template>
     <nav class="bg-white dark:bg-slate-800 ">
-        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto p-1 flex-col lg:flex-row">
+        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto py-1 flex-col lg:flex-row">
             <div class="flex-1 w-full md:w-fit flex md:block justify-between items-center">
                 <h1 class="flex-1">
                     <a href="#" class="block cursor-pointer text-xl font-bold">
