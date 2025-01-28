@@ -46,7 +46,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex-1 gap-2 hidden md:flex">
+            <div class="flex-1 hidden md:flex">
                 <div class="flex gap-2 ml-auto">
                     <div class="h-7 w-7">
                         <button
