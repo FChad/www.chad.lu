@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <Modal :isOpen="isOpen" title="Navigation" :handleModal="handleModal" >
+        <Modal :isOpen="isOpen" title="Navigation" :handleModal="handleModal">
             <template #body>
                 <ul class="flex justify-around items-center gap-x-2 flex-col p-2">
                     <li v-for="link in navLinks" :key="link.name" class="flex items-center text-base font-semibold">
@@ -95,7 +95,7 @@ const navLinks = [
 ];
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 nav {
     @apply border-slate-300 border-b border-opacity-70;
     @apply dark:border-slate-700 dark:text-slate-300;

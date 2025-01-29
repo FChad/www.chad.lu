@@ -143,4 +143,4 @@ const skills = [
     </div>
 </template>
 
-<style lang="css" scoped></style>
+<style lang="postcss" scoped></style>

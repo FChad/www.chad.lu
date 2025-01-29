@@ -38,17 +38,15 @@ const { isOpen, handleModal, title } = defineProps<Props>();
     </Transition>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .fade-enter-active,
 .fade-leave-active {
-    transition: all 0.15s;
-    transform-origin: center;
+    @apply transition-all duration-150 origin-center;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-    opacity: 0;
-    scale: 0.9;
+    @apply opacity-0 scale-90;
 }
 
 .skim {

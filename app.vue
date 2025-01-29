@@ -5,8 +5,7 @@
     </div>
 </template>
 
-<style lang="css">
-
+<style lang="postcss">
 body {
     /* font-family: 'Poppins', sans-serif; */
     @apply bg-slate-100 text-slate-700;
