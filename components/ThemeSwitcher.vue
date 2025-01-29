@@ -4,10 +4,6 @@ const colorMode = useColorMode()
 const toggleTheme = () => {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
-watch(colorMode, () => {
-    console.log(colorMode.preference);
-    console.log(colorMode.value);
-})
 </script>
 
 <template>

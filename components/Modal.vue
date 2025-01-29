@@ -11,9 +11,9 @@ const { isOpen, handleModal, title } = defineProps<Props>();
 </script>
 
 <template>
-    <div v-if="isOpen" class="skim z-50" @click="handleModal"></div>
+    <div v-if="isOpen" class="skim z-50"></div>
     <Transition name="fade">
-        <div v-if="isOpen" class="modal-overlay ">
+        <div v-if="isOpen" class="modal-overlay" @click="handleModal">
             <div class="modal-content" @click.stop>
                 <div class="flex items-center justify-between ">
                     <slot name="header">
@@ -30,7 +30,7 @@ const { isOpen, handleModal, title } = defineProps<Props>();
                     <slot name="body"></slot>
                 </div>
 
-                <div>
+                <div class="flex justify-end mt-4">
                     <slot name="footer"></slot>
                 </div>
             </div>
@@ -42,6 +42,7 @@ const { isOpen, handleModal, title } = defineProps<Props>();
 .fade-enter-active,
 .fade-leave-active {
     transition: all 0.15s;
+    transform-origin: center;
 }
 
 .fade-enter-from,
@@ -51,23 +52,24 @@ const { isOpen, handleModal, title } = defineProps<Props>();
 }
 
 .skim {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
+    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-25;
 }
 
 .modal-overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: center;
-    width: fit-content;
-    height: fit-content;
-    z-index: 50;
+    @apply fixed inset-0 flex items-center justify-center;
+    @apply z-50;
+}
+
+.modal-content {
+    @apply bg-white text-slate-700;
+    @apply dark:bg-slate-900 dark:text-slate-300;
+    @apply rounded-2xl p-4;
+    @apply min-w-64 normal-case;
+    @apply flex flex-col gap-2;
+}
+
+.modal-content>div:not(:last-child) {
+    @apply border-b border-slate-200 dark:border-slate-800;
 }
 
 .modal-content {
