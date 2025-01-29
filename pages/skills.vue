@@ -102,14 +102,14 @@ const skills = [
 <template>
     <div class="h-full w-full z-10 overflow-y-auto">
         <div class="max-w-7xl h-full w-full mx-auto">
-            <div class="px-4 md:px-0 py-4 font-semibold flex flex-col gap-4">
+            <div class="p-4 font-semibold flex flex-col gap-4">
                 <div class="flex flex-col gap-2">
                     <div class="flex gap-2">
                         <div class="text-xl font-bold">{{ certifications.title }}</div>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
                         <div v-for="cert in certifications.items" :key="cert.title"
-                            class="bg-white dark:bg-slate-800 p-4 rounded-lg flex flex-col gap-2 items-start justify-start w-full">
+                            class="bg-white dark:bg-slate-800 p-4 rounded-lg flex flex-col gap-2 items-start justify-start w-full shadow-md">
                             <div class="flex gap-2 items-center w-full">
                                 <Icon :name="certifications.icon" class="h-6 w-6" />
                                 <div class="flex-1 font-bold leading-tight">{{ cert.title }}</div>
@@ -131,8 +131,8 @@ const skills = [
                     </div>
                     <div class="flex flex-row flex-wrap gap-2">
                         <div v-for="skill in category.items" :key="skill.name"
-                            class="bg-white dark:bg-slate-800 p-2 rounded-lg flex gap-2 items-center justify-start">
-                            <img class="h-8 w-8" :src="skill.img" :alt="skill.name">
+                            class="bg-white dark:bg-slate-800 p-2 rounded-lg flex gap-2 items-center justify-start shadow-md">
+                            <img class="h-6 w-6" :src="skill.img" :alt="skill.name">
                             {{ skill.name }}
                         </div>
                     </div>

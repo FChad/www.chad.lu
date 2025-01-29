@@ -1,6 +1,6 @@
 <template>
     <nav class="bg-white dark:bg-slate-800 ">
-        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto py-1 flex-col lg:flex-row">
+        <div class="container max-w-7xl flex flex-wrap gap-2 items-center mx-auto px-4 py-2 flex-col lg:flex-row">
             <div class="flex-1 w-full md:w-fit flex md:block justify-between items-center">
                 <h1 class="flex-1">
                     <a href="#" class="block cursor-pointer text-xl font-bold">
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <Modal :isOpen="isOpen" title="Navigation" :handleModal="handleModal" class="!z-50">
+        <Modal :isOpen="isOpen" title="Navigation" :handleModal="handleModal" >
             <template #body>
                 <ul class="flex justify-around items-center gap-x-2 flex-col p-2">
                     <li v-for="link in navLinks" :key="link.name" class="flex items-center text-base font-semibold">
@@ -73,9 +73,6 @@
                         </NuxtLink>
                     </li>
                 </ul>
-            </template>
-            <template #footer>
-
             </template>
         </Modal>
     </nav>
@@ -103,6 +100,6 @@ nav {
     @apply border-slate-300 border-b border-opacity-70;
     @apply dark:border-slate-700 dark:text-slate-300;
     @apply uppercase;
-    @apply w-full shadow px-4 py-1;
+    @apply w-full shadow;
 }
 </style>

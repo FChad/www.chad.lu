@@ -11,39 +11,63 @@ const { isOpen, handleModal, title } = defineProps<Props>();
 </script>
 
 <template>
-    <div v-if="isOpen" class="modal-overlay " @click="handleModal">
-        <div class="modal-content" @click.stop>
-            <div class="flex items-center justify-between relative">
-                <slot name="header">
-                    <h2 class="font-semibold text-lg">{{ title }}</h2>
-                    <button class="absolute bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 rounded-lg top-0 right-0 p-1 pointer flex items-center justify-center" @click="handleModal">
-                        <Icon name="material-symbols:close-rounded" />
-                    </button>
-                </slot>
-            </div>
+    <div v-if="isOpen" class="skim z-50" @click="handleModal"></div>
+    <Transition name="fade">
+        <div v-if="isOpen" class="modal-overlay ">
+            <div class="modal-content" @click.stop>
+                <div class="flex items-center justify-between ">
+                    <slot name="header">
+                        <h2 class="font-semibold text-lg">{{ title }}</h2>
+                        <button
+                            class=" bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 rounded-lg  p-1  flex items-center justify-center"
+                            @click="handleModal">
+                            <Icon name="material-symbols:close-rounded" />
+                        </button>
+                    </slot>
+                </div>
 
-            <div>
-                <slot name="body"></slot>
-            </div>
+                <div>
+                    <slot name="body"></slot>
+                </div>
 
-            <div>
-                <slot name="footer"></slot>
+                <div>
+                    <slot name="footer"></slot>
+                </div>
             </div>
         </div>
-    </div>
+    </Transition>
 </template>
 
 <style scoped>
-.modal-overlay {
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.15s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+    scale: 0.9;
+}
+
+.skim {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: fit-content;
+    height: fit-content;
+    z-index: 50;
 }
 
 .modal-content {
@@ -54,7 +78,7 @@ const { isOpen, handleModal, title } = defineProps<Props>();
     @apply flex flex-col gap-2;
 }
 
-.modal-content > div:not(:last-child) {
+.modal-content>div:not(:last-child) {
     @apply border-b border-slate-200 dark:border-slate-800;
 }
 </style>

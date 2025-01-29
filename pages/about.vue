@@ -4,7 +4,7 @@
 
 <template>
     <div class="h-full w-full overflow-y-auto">
-        <div class="max-w-7xl h-full w-full mx-auto px-4 md:px-0 py-4 font-semibold flex flex-col gap-4">
+        <div class="max-w-7xl h-full w-full mx-auto p-4 font-semibold flex flex-col gap-4">
             <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
                 <div class="flex items-center gap-4">
                     <img src="https://picsum.photos/96" alt="Profile Picture"
@@ -14,7 +14,7 @@
                         <div class="text-xl font-bold">Feierstein Chad</div>
                     </div>
                 </div>
-                <div class="flex-1 flex flex-col sm:flex-row items-center gap-2">
+                <div class="flex-1 flex flex-row items-center gap-2 text-sm sm:text-base">
                     <div class="badge text-center sm:text-left p-2">
                         <span class="label opacity-75">Nationality:</span><br>Luxembourgish
                     </div>
@@ -32,7 +32,7 @@
 
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="flex flex-col gap-4">
-                    <div class="bg-white dark:bg-slate-700 rounded-lg p-4 flex flex-col gap-2">
+                    <div class="bg-white dark:bg-slate-700 rounded-lg p-4 flex flex-col gap-2 shadow-md">
                         <h2 class="font-bold opacity-75">Languages:</h2>
                         <ul class="list-none space-y-2">
                             <li class="flex items-center gap-2">
@@ -54,7 +54,7 @@
                         </ul>
                     </div>
 
-                    <div class="bg-white dark:bg-slate-700 rounded-lg p-4 flex flex-col gap-2">
+                    <div class="bg-white dark:bg-slate-700 rounded-lg p-4 flex flex-col gap-2 shadow-md">
                         <h2 class="font-bold opacity-75">Driver's License:</h2>
                         <ul class="list-none space-y-2">
                             <li class="flex items-center gap-2">
@@ -66,7 +66,7 @@
 
                 <div class="flex-1 flex flex-col lg:flex-row gap-4">
                     <div
-                        class="flex-1 flex flex-col lg:flex-row flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
+                        class="flex-1 flex flex-col lg:flex-row flex-wrap gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg shadow-md">
                         <div class="flex flex-col gap-2 lg:w-[calc(50%-0.5rem)]">
                             <h2 class="font-bold opacity-75">Über mich</h2>
                             <p>Hallo, mein Name ist Chad Feierstein und ich stamme aus dem wunderschönen Luxemburg. Ich
@@ -115,7 +115,7 @@
 
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="w-full h-full flex flex-row justify-between items-center gap-4">
-                    <div class="flex-1 flex flex-col gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg ">
+                    <div class="flex-1 flex flex-col gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg shadow-md">
                         <div>
                             <h3 class="font-bold opacity-75">Zeitstrahl</h3>
                         </div>
@@ -217,7 +217,7 @@
 
             <div class="flex flex-col md:flex-row gap-4">
                 <div class="w-full h-full flex flex-row justify-between items-center gap-4">
-                    <div class="flex-1 flex flex-col gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg mb-4">
+                    <div class="flex-1 flex flex-col gap-4 p-4 bg-white dark:bg-slate-700 rounded-lg mb-4 shadow-md">
                         <div>
                             <h3 class="font-bold opacity-75">Besondere Erlebnisse</h3>
                         </div>
