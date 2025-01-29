@@ -83,7 +83,7 @@ const timelineEvents = [
     <div class="min-h-screen bg-gray-50 dark:bg-slate-900 overflow-y-auto">
         <div class="max-w-7xl mx-auto p-4 flex flex-col gap-3">
             <!-- Hero Section with Profile -->
-            <div class="max-w-7xl mx-auto p-4 min-h-screen lg:h-screen flex flex-col gap-3">
+            <div class="max-w-7xl mx-auto min-h-screen lg:h-screen flex flex-col gap-3">
                 <!-- Profile Header -->
                 <div
                     class="bg-white dark:bg-slate-800 rounded-xl px-6 py-4 shadow-sm border border-gray-100 dark:border-slate-700 lg:flex-shrink-0">
@@ -202,40 +202,33 @@ const timelineEvents = [
                         <div
                             class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
                             <h2 class="text-xl font-bold mb-6">Professional Journey</h2>
-                            <div class="grid grid-cols-[1fr_3px_1fr] gap-4 relative">
+                            <div class="relative">
                                 <!-- Timeline Line -->
-                                <div
-                                    class="absolute left-1/2 top-0 bottom-0 w-[3px] bg-blue-200 dark:bg-blue-900 -translate-x-1/2">
+                                <div class="absolute left-[17px] top-0 bottom-0 w-[3px] bg-blue-200 dark:bg-blue-900 lg:left-1/2 lg:-translate-x-[1.5px]"></div>
+
+                                <div class="space-y-6">
+                                    <template v-for="event in timelineEvents" :key="event.year">
+                                        <!-- Mobile: Single column, Desktop: Two columns -->
+                                        <div class="relative flex gap-4 lg:grid lg:grid-cols-[1fr_0_1fr] lg:items-start lg:gap-0">
+                                            <!-- Dot -->
+                                            <div class="absolute left-[14px] -translate-x-[2px] top-2 lg:static lg:col-start-2 lg:w-0 lg:mx-auto lg:-translate-x-[8px] lg:z-10">
+                                                <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-slate-800"></div>
+                                            </div>
+
+                                            <!-- Content -->
+                                            <div class="ml-12 lg:ml-0" :class="{
+                                                'lg:col-start-1 lg:text-right lg:pr-8': event.position === 'left',
+                                                'lg:col-start-3 lg:pl-8': event.position === 'right'
+                                            }">
+                                                <div class="backdrop-blur-sm p-4 rounded-lg">
+                                                    <span class="font-bold text-blue-500">{{ event.year }}</span>
+                                                    <h3 class="font-bold mt-1">{{ event.title }}</h3>
+                                                    <p class="text-gray-600 dark:text-gray-300 mt-1">{{ event.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
                                 </div>
-
-                                <template v-for="event in timelineEvents" :key="event.year">
-                                    <!-- Left column -->
-                                    <div :class="event.position === 'left' ? 'text-right pr-8' : ''">
-                                        <div v-if="event.position === 'left'"
-                                            class="backdrop-blur-sm p-4 rounded-lg">
-                                            <span class="font-bold text-blue-500">{{ event.year }}</span>
-                                            <h3 class="font-bold mt-1">{{ event.title }}</h3>
-                                            <p class="text-gray-600 dark:text-gray-300 mt-1">{{ event.description }}</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Center dot -->
-                                    <div class="relative flex items-center justify-center">
-                                        <div
-                                            class="absolute w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-slate-800">
-                                        </div>
-                                    </div>
-
-                                    <!-- Right column -->
-                                    <div :class="event.position === 'right' ? 'pl-8' : ''">
-                                        <div v-if="event.position === 'right'"
-                                            class="backdrop-blur-sm p-4 rounded-lg">
-                                            <span class="font-bold text-blue-500">{{ event.year }}</span>
-                                            <h3 class="font-bold mt-1">{{ event.title }}</h3>
-                                            <p class="text-gray-600 dark:text-gray-300 mt-1">{{ event.description }}</p>
-                                        </div>
-                                    </div>
-                                </template>
                             </div>
                         </div>
 

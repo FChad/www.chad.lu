@@ -1,11 +1,10 @@
 <template>
     <nav class="bg-white dark:bg-slate-800 sticky top-0 z-50 min-h-14 flex items-center w-full">
-        <div class="container max-w-7xl mx-auto  w-full flex items-center justify-between p-2">
+        <div class="container max-w-7xl mx-auto w-full flex items-center justify-between px-4 py-2">
             <!-- Main Navigation Bar -->
-            <div class="flex items-center justify-between  w-full ">
+            <div class="flex items-center w-full gap-4">
                 <!-- Logo -->
-                <div class="flex items-center  w-full">
-
+                <div class="flex-shrink-0">
                     <NuxtLink to="/" class="block cursor-pointer">
                         <h1 class="text-xl font-bold">
                             <span
@@ -15,8 +14,8 @@
                         </h1>
                     </NuxtLink>
                 </div>
-                <div class="w-full h-full flex items-center justify-center">
 
+                <div class="flex-1 flex items-center justify-center">
                     <!-- Desktop Navigation -->
                     <div class="hidden lg:flex items-center gap-8">
                         <ul class="flex items-center gap-8">
@@ -33,33 +32,24 @@
                                 </NuxtLink>
                             </li>
                         </ul>
-
-                        <div class="flex items-center gap-3">
-                            <LanguageSwitcher />
-                            <div class="w-8 h-8">
-                                <ClientOnly>
-                                    <ThemeSwitcher />
-                                </ClientOnly>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Controls -->
-                    <div class="flex items-center justify-end gap-3 lg:hidden w-full h-full ">
-                        <LanguageSwitcher />
-                        <div class="w-8 h-8">
-                            <ClientOnly>
-                                <ThemeSwitcher />
-                            </ClientOnly>
-                        </div>
-                        <BaseButton variant="filled" size="sm" shape="square" type="button" icon="material-symbols:menu"
-                            :disabled="false"
-                            class="bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300"
-                            @click="handleModal">
-                        </BaseButton>
                     </div>
                 </div>
 
+                <!-- Right Controls -->
+                <div class="flex items-center gap-3">
+                    <LanguageSwitcher />
+                    <div class="w-8 h-8">
+                        <ClientOnly>
+                            <ThemeSwitcher />
+                        </ClientOnly>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <BaseButton variant="filled" size="sm" shape="square" type="button" icon="material-symbols:menu"
+                        :disabled="false"
+                        class="lg:hidden bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300"
+                        @click="handleModal">
+                    </BaseButton>
+                </div>
             </div>
         </div>
 
