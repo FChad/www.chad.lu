@@ -85,7 +85,7 @@ onUnmounted(() => {
                 :aria-expanded="isOpen"
                 aria-haspopup="listbox"
                 :aria-label="'Select language. Current language is ' + languageMap[locale].name"
-                class="flex items-center h-8 gap-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent p-1 w-full h-fullsm:h-auto justify-center"
+                class="lg:min-w-40 flex items-center h-8 gap-2 border border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent p-1 w-full h-fullsm:h-auto justify-center"
                 @click="isOpen = !isOpen"
             >
                 <Icon 
