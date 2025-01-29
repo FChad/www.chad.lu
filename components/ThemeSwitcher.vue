@@ -7,12 +7,14 @@ const toggleTheme = () => {
 </script>
 
 <template>
-    <button
-        class="bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-yellow-500 h-full w-full flex items-center justify-center rounded-lg"
+    <BaseButton variant="filled" size="sm" shape="square" type="button" :disabled="false"
+        class="bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-yellow-500"
         @click="toggleTheme">
-        <Icon v-if="colorMode.value === 'dark'" name="material-symbols-light:sunny" />
-        <Icon v-else name="material-symbols:dark-mode-rounded" />
-    </button>
+        <ClientOnly>
+            <Icon v-if="colorMode.value === 'dark'" name="material-symbols-light:sunny" size="16" />
+            <Icon v-else name="material-symbols:dark-mode-rounded" size="16" />
+        </ClientOnly>
+    </BaseButton>
 </template>
 
 <style scoped lang="postcss"></style>

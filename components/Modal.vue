@@ -1,41 +1,55 @@
 <script lang="ts" setup>
+import { onMounted, onUnmounted } from 'vue';
 
 interface Props {
     isOpen: Ref<boolean>;
-    title: string
+    title?: string;
+    hasFooter?: boolean;
     handleModal: () => void;
 }
 
-const { isOpen, handleModal, title } = defineProps<Props>();
+const props = defineProps<Props>();
 
+// Close on escape key
+onMounted(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === 'Escape' && props.isOpen) {
+            props.handleModal();
+        }
+    };
+    document.addEventListener('keydown', handleEscape);
+    onUnmounted(() => document.removeEventListener('keydown', handleEscape));
+});
 </script>
 
 <template>
-    <div v-if="isOpen" class="skim z-50"></div>
-    <Transition name="fade">
-        <div v-if="isOpen" class="modal-overlay" @click="handleModal">
-            <div class="modal-content" @click.stop>
-                <div class="flex items-center justify-between ">
-                    <slot name="header">
-                        <h2 class="font-semibold text-lg">{{ title }}</h2>
-                        <button
-                            class=" bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 rounded-lg  p-1  flex items-center justify-center"
-                            @click="handleModal">
-                            <Icon name="material-symbols:close-rounded" />
-                        </button>
-                    </slot>
-                </div>
+    <Teleport to="body">
+        <!-- Backdrop outside transition -->
+        <div v-if="isOpen" class="modal-backdrop" @click="handleModal"></div>
 
-                <div>
-                    <slot name="body"></slot>
-                </div>
+        <Transition name="fade">
+            <div v-if="isOpen" role="dialog" aria-modal="true" :aria-label="title" class="modal-wrapper">
+                <!-- Modal -->
+                <div class="modal-content" @click.stop>
+                    <div class="modal-header">
+                        <slot name="header">
+                            <h2 v-if="title" class="font-semibold text-lg">{{ title }}</h2>
+                            <BaseButton variant="secondary" size="sm" shape="square" icon="material-symbols:close-rounded"
+                                @click="handleModal" aria-label="Close modal" />
+                        </slot>
+                    </div>
 
-                <div class="flex justify-end mt-4">
-                    <slot name="footer"></slot>
+                    <div class="modal-body">
+                        <slot name="body"></slot>
+                    </div>
+
+                    <div v-if="hasFooter" class="modal-footer">
+                        <slot name="footer"></slot>
+                    </div>
                 </div>
             </div>
-        </div>
-    </Transition>
+        </Transition>
+    </Teleport>
 </template>
 
 <style scoped lang="postcss">
@@ -49,36 +63,31 @@ const { isOpen, handleModal, title } = defineProps<Props>();
     @apply opacity-0 scale-90;
 }
 
-.skim {
-    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-25;
+.modal-wrapper {
+    @apply fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[51];
 }
 
-.modal-overlay {
-    @apply fixed inset-0 flex items-center justify-center;
-    @apply z-50;
-}
-
-.modal-content {
-    @apply bg-white text-slate-700;
-    @apply dark:bg-slate-900 dark:text-slate-300;
-    @apply rounded-2xl p-4;
-    @apply min-w-64 normal-case;
-    @apply flex flex-col gap-2;
-}
-
-.modal-content>div:not(:last-child) {
-    @apply border-b border-slate-200 dark:border-slate-800;
+.modal-backdrop {
+    @apply fixed inset-0 z-50 bg-black/25;
 }
 
 .modal-content {
-    @apply bg-white text-slate-700;
-    @apply dark:bg-slate-900 dark:text-slate-300;
-    @apply rounded-2xl p-4;
-    @apply min-w-64 normal-case;
-    @apply flex flex-col gap-2;
+    @apply bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 rounded-2xl p-4 min-w-64 normal-case flex flex-col gap-2 relative;
 }
 
-.modal-content>div:not(:last-child) {
-    @apply border-b border-slate-200 dark:border-slate-800;
+.modal-header {
+    @apply flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800;
+}
+
+.modal-body {
+    @apply py-2;
+}
+
+.modal-footer {
+    @apply flex justify-end pt-2 border-t border-slate-200 dark:border-slate-800;
+}
+
+.close-button {
+    @apply bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 rounded-lg p-1 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors;
 }
 </style>
