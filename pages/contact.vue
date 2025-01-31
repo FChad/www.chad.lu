@@ -14,7 +14,7 @@ const formFields = [
             <div class="text-center mb-12">
                 <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Get in Touch</h1>
                 <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                    Have questions or feedback? We're here to help. Send us a message, and we'll respond within 24
+                    Have questions or feedback? I'm here to help. Send us a message, and I'll respond within 24
                     hours.
                 </p>
             </div>
@@ -52,7 +52,7 @@ const formFields = [
 
                 <!-- Social Media Section -->
                 <div class="bg-white dark:bg-slate-700 rounded-2xl shadow-lg p-6">
-                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Connect With Us</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Connect With Me</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <NuxtLink to="#"
                             class="group bg-gray-50 dark:bg-slate-800 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-900 transition-colors ">
@@ -111,7 +111,7 @@ const formFields = [
                         </NuxtLink>
                     </div>
                     <div class="mt-8 flex justify-center">
-                        <img src="https://raw.githubusercontent.com/ShaifArfan/shaif-s-cuisine/main/images/about-photo.jpg"
+                        <img src="/contact/pexels-pixabay-533446.jpg"
                             alt="Connect with us illustration"
                             class="w-full max-w-md h-auto rounded-xl opacity-90 dark:opacity-80 shadow-lg" />
                     </div>
