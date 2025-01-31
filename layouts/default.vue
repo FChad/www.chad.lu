@@ -1,8 +1,18 @@
 <template>
-    <NuxtLayout>
-        <NuxtPage />
-    </NuxtLayout>
+    <div class="w-screen h-screen flex flex-col overflow-hidden">
+        <!-- Navigation bar -->
+        <Navigation />
+        
+        <!-- Main content area -->
+        <main class="flex-1 overflow-hidden bg-slate-100 dark:bg-slate-900">
+            <slot />
+        </main>
+    </div>
 </template>
+
+<script setup lang="ts">
+// The Navigation component will be auto-imported since it's in the components directory
+</script>
 
 <style lang="postcss">
 body {
@@ -26,4 +36,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-slate-500 dark:bg-slate-600;
 }
-</style>
+</style> 

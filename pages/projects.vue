@@ -45,17 +45,21 @@ const projects: Project[] = [
 </script>
 
 <template>
-    <div class="flex-1 overflow-y-auto">
-        <div class="max-w-7xl w-full mx-auto p-4 font-semibold">
-            <h2 class="text-4xl font-bold mb-8 text-gray-800 dark:text-white">Projects</h2>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
-                Explore some of my recent work and personal projects
-            </p>
+    <div class="h-full bg-gray-50 dark:bg-slate-900 overflow-y-auto">
+        <div class="max-w-7xl mx-auto p-4">
+            <!-- Header Card -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Explore some of my recent work and personal projects
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div v-for="project in projects" 
                      :key="project.id"
-                     class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                     class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden group">
                     <a :href="project.link" class="block">
                         <div class="aspect-video overflow-hidden">
                             <img :src="project.image" 
@@ -63,7 +67,7 @@ const projects: Project[] = [
                                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
                                 {{ project.title }}
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 mb-4">
@@ -72,7 +76,7 @@ const projects: Project[] = [
                             <div class="flex flex-wrap gap-2">
                                 <span v-for="tag in project.tags" 
                                       :key="tag"
-                                      class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-sm">
+                                      class="px-3 py-1 bg-gray-50 dark:bg-slate-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm">
                                     {{ tag }}
                                 </span>
                             </div>

@@ -12,15 +12,33 @@ const languageMap = {
     fr: {
         name: 'Français',
         flag: '🇫🇷'
+    },
+    lu: {
+        name: 'Lëtzebuergesch',
+        flag: '🇱🇺'
+    },
+    de: {
+        name: 'Deutsch',
+        flag: '🇩🇪'
     }
 };
 
 // Add type for supported languages
-type LanguageCode = 'en' | 'fr';
+type LanguageCode = 'en' | 'fr' | 'lu' | 'de';
 
 const switchLanguage = async (code: LanguageCode) => {
-    await setLocale(code);
-    isOpen.value = false;
+    try {
+        // Set locale first
+        await setLocale(code);
+        // Store in localStorage after successful switch
+        localStorage.setItem('user-locale', code);
+        // Close dropdown
+        isOpen.value = false;
+        // Force a page refresh to ensure all components update
+        window.location.reload();
+    } catch (error) {
+        console.error('Failed to switch language:', error);
+    }
 };
 
 // Handle click outside
@@ -84,6 +102,7 @@ const handleBlur = (event: FocusEvent) => {
     }
 };
 
+// Remove the onMounted language initialization since it's now handled by the plugin
 onMounted(() => {
     document.addEventListener('click', handleClickOutside);
 });

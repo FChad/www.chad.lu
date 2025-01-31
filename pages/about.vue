@@ -80,7 +80,7 @@ const timelineEvents = [
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-50 dark:bg-slate-900 overflow-y-auto">
+    <div class="h-full bg-gray-50 dark:bg-slate-900 overflow-y-auto">
         <div class="max-w-7xl mx-auto p-4 flex flex-col gap-3">
             <!-- Hero Section with Profile -->
             <div class="max-w-7xl mx-auto min-h-screen lg:h-screen flex flex-col gap-3">

@@ -100,50 +100,48 @@ const skills = [
 </script>
 
 <template>
-    <div class="h-full w-full z-10 overflow-y-auto bg-gray-50 dark:bg-gray-900">
-        <div class="max-w-7xl h-full w-full mx-auto p-4">
-            <div class=" flex flex-col gap-3">
-                <!-- Certifications Section -->
-                <section class="rounded-xl bg-white dark:bg-slate-800 p-6 shadow-md">
-                    <h2 class="text-2xl font-bold flex items-center gap-3 mb-4">
-                        <Icon :name="certifications.icon" class="h-7 w-7 text-blue-500" />
-                        {{ certifications.title }}
-                    </h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                        <div v-for="cert in certifications.items" :key="cert.title"
-                            class="group bg-white dark:bg-slate-800 p-5 rounded-lg hover:shadow-md border border-gray-100 dark:border-slate-700 flex flex-col">
-                            <div class="flex gap-3 items-start">
-                                <div class="flex-1">
-                                    <h3 class="font-bold text-lg group-hover:text-blue-500">{{ cert.title }}</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mt-2">{{ cert.details }}</p>
-                                </div>
-                                <span class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
-                                    {{ cert.year }}
-                                </span>
+    <div class="h-full bg-gray-50 dark:bg-slate-900 overflow-y-auto">
+        <div class="max-w-7xl mx-auto p-4">
+            <!-- Certifications Section -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-4">
+                    <Icon :name="certifications.icon" class="h-7 w-7 text-blue-500" />
+                    {{ certifications.title }}
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div v-for="cert in certifications.items" :key="cert.title"
+                        class="bg-gray-50 dark:bg-slate-700 p-5 rounded-xl group">
+                        <div class="flex gap-3 items-start">
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 dark:text-white group-hover:text-blue-500">{{ cert.title }}</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mt-2">{{ cert.details }}</p>
                             </div>
-                            <div class="mt-auto pt-4 text-right">
-                                <a :href="cert.link" target="_blank" 
-                                   class="inline-flex items-center text-sm text-blue-500 hover:text-blue-700">
-                                    More Information
-                                    <Icon name="heroicons:arrow-right" class="ml-1 h-4 w-4" />
-                                </a>
-                            </div>
+                            <span class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
+                                {{ cert.year }}
+                            </span>
+                        </div>
+                        <div class="mt-4 text-right">
+                            <a :href="cert.link" target="_blank" 
+                               class="inline-flex items-center text-sm text-blue-500 hover:text-blue-700">
+                                More Information
+                                <Icon name="heroicons:arrow-right" class="ml-1 h-4 w-4" />
+                            </a>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
 
-                <!-- Skills Categories -->
-                <section v-for="category in skills" :key="category.title" 
-                         class="rounded-xl bg-white dark:bg-slate-800 p-6 shadow-md">
-                    <h2 class="text-2xl font-bold mb-6">{{ category.title }}</h2>
-                    <div class="flex flex-wrap gap-3">
-                        <div v-for="skill in category.items" :key="skill.name"
-                            class="group flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-slate-600">
-                            <img class="h-6 w-6" :src="skill.img" :alt="skill.name">
-                            <span class="font-medium">{{ skill.name }}</span>
-                        </div>
+            <!-- Skills Categories -->
+            <div v-for="category in skills" :key="category.title" 
+                 class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{{ category.title }}</h2>
+                <div class="flex flex-wrap gap-4">
+                    <div v-for="skill in category.items" :key="skill.name"
+                        class="group flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-slate-600">
+                        <img class="h-6 w-6" :src="skill.img" :alt="skill.name">
+                        <span class="font-medium text-gray-900 dark:text-white">{{ skill.name }}</span>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>

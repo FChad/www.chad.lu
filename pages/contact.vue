@@ -8,7 +8,7 @@ const formFields = [
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-50 dark:bg-slate-800">
+    <div class="h-full bg-gray-50 dark:bg-slate-800 overflow-y-auto">
         <div class="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
             <!-- Page Header -->
             <div class="text-center mb-12">

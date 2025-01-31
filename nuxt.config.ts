@@ -5,9 +5,14 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
   i18n: {
     locales: [
-      { code: 'en', language: 'en-US' },
-      { code: 'fr', language: 'fr-FR' }
+      { code: 'en', language: 'en-US', file: 'en.json' },
+      { code: 'fr', language: 'fr-FR', file: 'fr.json' },
+      { code: 'de', language: 'de-DE', file: 'de.json' },
+      { code: 'lu', language: 'lb-LU', file: 'lu.json' }
     ],
     defaultLocale: 'en',
+    lazy: true,
+    langDir: 'locales/',
+    strategy: 'prefix_except_default'
   }
 })
