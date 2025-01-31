@@ -34,8 +34,6 @@ const switchLanguage = async (code: LanguageCode) => {
         localStorage.setItem('user-locale', code);
         // Close dropdown
         isOpen.value = false;
-        // Force a page refresh to ensure all components update
-        window.location.reload();
     } catch (error) {
         console.error('Failed to switch language:', error);
     }

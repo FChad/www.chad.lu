@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
+
 const languages = [
     {
         name: 'Luxembourgish',
@@ -9,7 +13,7 @@ const languages = [
     {
         name: 'German',
         code: 'de',
-        level: 'Native',
+        level: 'Advanced',
         proficiency: 100
     },
     {
@@ -96,27 +100,31 @@ const timelineEvents = [
                         <div class="flex-1 text-center lg:text-left">
                             <h1 class="text-2xl font-bold mb-2">Feierstein Chad</h1>
                             <div class="flex flex-wrap justify-center lg:justify-start gap-3">
-                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
-                                    <Icon name="mdi:earth" class="w-4 h-4"/>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
+                                    <Icon name="mdi:earth" class="w-4 h-4" />
                                     Luxembourgish
                                 </span>
-                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
-                                    <Icon name="mdi:map-marker" class="w-4 h-4"/>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
+                                    <Icon name="mdi:map-marker" class="w-4 h-4" />
                                     Rumelange
                                 </span>
-                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
-                                    <Icon name="mdi:heart" class="w-4 h-4"/>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
+                                    <Icon name="mdi:heart" class="w-4 h-4" />
                                     Single
                                 </span>
-                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
-                                    <Icon name="mdi:cake-variant" class="w-4 h-4"/>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">
+                                    <Icon name="mdi:cake-variant" class="w-4 h-4" />
                                     25 years
                                 </span>
                             </div>
                         </div>
 
                         <div class="lg:ml-auto">
-                            <NuxtLink to="/contact">
+                            <NuxtLink :to="localePath('/contact')">
                                 <BaseButton>
                                     <span class="flex items-center gap-2">
                                         <Icon name="mdi:message" class="w-5 h-5" />
@@ -141,10 +149,12 @@ const timelineEvents = [
                                     class="space-y-2 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors">
                                     <div class="flex items-center gap-4">
                                         <div class="flex items-center gap-2 min-w-0 flex-1">
-                                            <Icon :name="`circle-flags:${language.code}`" class="w-6 h-6 flex-shrink-0"/>
+                                            <Icon :name="`circle-flags:${language.code}`"
+                                                class="w-6 h-6 flex-shrink-0" />
                                             <span class="font-medium truncate">{{ language.name }}</span>
                                         </div>
-                                        <span class="text-sm text-blue-500 dark:text-blue-400 flex-shrink-0">{{ language.level }}</span>
+                                        <span class="text-sm text-blue-500 dark:text-blue-400 flex-shrink-0">{{
+                                            language.level }}</span>
                                     </div>
                                     <div class="w-full bg-gray-200 dark:bg-slate-600 rounded-full h-2">
                                         <div class="bg-blue-500 dark:bg-blue-400 h-2 rounded-full transition-all duration-500"
@@ -155,15 +165,17 @@ const timelineEvents = [
                         </div>
 
                         <!-- Driver's License Card -->
-                        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
                             <h2 class="text-xl font-bold mb-4">Driver's License</h2>
                             <div class="space-y-3">
                                 <div class="flex items-center gap-4 p-3 rounded-lg bg-gray-50 dark:bg-slate-700/50">
-                                    <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <Icon name="mdi:car" class="w-5 h-5 text-blue-500 dark:text-blue-400"/>
+                                    <div
+                                        class="w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <Icon name="mdi:car" class="w-4 h-4 text-blue-500 dark:text-blue-400" />
                                     </div>
                                     <div class="min-w-0 flex-1">
-                                        <div class="font-medium truncate">Category B</div>
+                                        <div class="text-sm font-medium truncate">Category B</div>
                                     </div>
                                     <div class="flex-shrink-0">
                                         <span class="whitespace-nowrap px-2 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-500 dark:text-blue-400 rounded-full text-xs">
@@ -173,11 +185,11 @@ const timelineEvents = [
                                 </div>
                                 <div class="text-sm text-gray-600 dark:text-gray-300 px-2">
                                     <div class="flex items-center gap-1">
-                                        <Icon name="mdi:check" class="w-4 h-4 text-green-500"/> 
+                                        <Icon name="mdi:check" class="w-4 h-4 text-green-500" />
                                         <span>Manual transmission</span>
                                     </div>
                                     <div class="flex items-center gap-1">
-                                        <Icon name="mdi:check" class="w-4 h-4 text-green-500"/> 
+                                        <Icon name="mdi:check" class="w-4 h-4 text-green-500" />
                                         <span>Clean driving record</span>
                                     </div>
                                 </div>
@@ -193,7 +205,8 @@ const timelineEvents = [
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div v-for="section in aboutSections" :key="section.title" class="space-y-4">
                                     <h2 class="text-xl font-bold">{{ section.title }}</h2>
-                                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">{{ section.content }}</p>
+                                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">{{ section.content }}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -204,15 +217,21 @@ const timelineEvents = [
                             <h2 class="text-xl font-bold mb-6">Professional Journey</h2>
                             <div class="relative">
                                 <!-- Timeline Line -->
-                                <div class="absolute left-[17px] top-0 bottom-0 w-[3px] bg-blue-200 dark:bg-blue-900 lg:left-1/2 lg:-translate-x-[1.5px]"></div>
+                                <div
+                                    class="absolute left-[17px] top-0 bottom-0 w-[3px] bg-blue-200 dark:bg-blue-900 lg:left-1/2 lg:-translate-x-[1.5px]">
+                                </div>
 
                                 <div class="space-y-6">
                                     <template v-for="event in timelineEvents" :key="event.year">
                                         <!-- Mobile: Single column, Desktop: Two columns -->
-                                        <div class="relative flex gap-4 lg:grid lg:grid-cols-[1fr_0_1fr] lg:items-start lg:gap-0">
+                                        <div
+                                            class="relative flex gap-4 lg:grid lg:grid-cols-[1fr_0_1fr] lg:items-start lg:gap-0">
                                             <!-- Dot -->
-                                            <div class="absolute left-[14px] -translate-x-[2px] top-2 lg:static lg:col-start-2 lg:w-0 lg:mx-auto lg:-translate-x-[8px] lg:z-10">
-                                                <div class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-slate-800"></div>
+                                            <div
+                                                class="absolute left-[14px] -translate-x-[2px] top-2 lg:static lg:col-start-2 lg:w-0 lg:mx-auto lg:-translate-x-[8px] lg:z-10">
+                                                <div
+                                                    class="w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-slate-800">
+                                                </div>
                                             </div>
 
                                             <!-- Content -->
@@ -223,7 +242,8 @@ const timelineEvents = [
                                                 <div class="backdrop-blur-sm p-4 rounded-lg">
                                                     <span class="font-bold text-blue-500">{{ event.year }}</span>
                                                     <h3 class="font-bold mt-1">{{ event.title }}</h3>
-                                                    <p class="text-gray-600 dark:text-gray-300 mt-1">{{ event.description }}</p>
+                                                    <p class="text-gray-600 dark:text-gray-300 mt-1">{{
+                                                        event.description }}</p>
                                                 </div>
                                             </div>
                                         </div>

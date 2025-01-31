@@ -1,5 +1,14 @@
 <script lang="ts" setup>
+import { useLocalePath } from '#imports'
+import { useNavigation } from '~/composables/useNavigation'
+import { computed } from 'vue'
 
+const localePath = useLocalePath()
+const { navLinks, getLink } = useNavigation()
+
+// Example of getting specific links
+const aboutLink = computed(() => getLink('nav.about'))
+const projectsLink = computed(() => getLink('nav.projects'))
 </script>
 
 <template>
@@ -28,13 +37,13 @@
                             </p>
                             <div class="flex items-center justify-start gap-4">
                                 <button class="bg-blue-500 text-white px-4 py-1 rounded-full">
-                                    <NuxtLink class="flex items-center gap-1" to="/about">
-                                        <Icon name="material-symbols-light:mail" /> About
+                                    <NuxtLink class="flex items-center gap-1" :to="aboutLink?.to">
+                                        <Icon :name="aboutLink?.icon" /> {{ $t(aboutLink?.name) }}
                                     </NuxtLink>
                                 </button>
                                 <button class="border border-white text-white px-4 py-1 rounded-full">
-                                    <NuxtLink class="flex items-center gap-1" to="/projects">
-                                        <Icon name="material-symbols-light:folder" /> Projects
+                                    <NuxtLink class="flex items-center gap-1" :to="projectsLink?.to">
+                                        <Icon :name="projectsLink?.icon" /> {{ $t(projectsLink?.name) }}
                                     </NuxtLink>
                                 </button>
                             </div>

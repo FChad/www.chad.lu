@@ -78,22 +78,16 @@
 </template>
 
 <script setup>
+import { useNavigation } from '~/composables/useNavigation'
 import { useLocalePath } from '#imports'
 
 const localePath = useLocalePath()
-const isOpen = ref(false);
+const { navLinks } = useNavigation()
+const isOpen = ref(false)
 
 const handleModal = () => {
-    isOpen.value = !isOpen.value;
-};
-
-const navLinks = [
-    { name: 'nav.home', to: localePath('/'), icon: 'material-symbols-light:family-home' },
-    { name: 'nav.about', to: localePath('/about'), icon: 'material-symbols-light:person' },
-    { name: 'nav.skills', to: localePath('/skills'), icon: 'material-symbols-light:book-2' },
-    { name: 'nav.projects', to: localePath('/projects'), icon: 'material-symbols-light:folder' },
-    { name: 'nav.contact', to: localePath('/contact'), icon: 'material-symbols-light:mail' }
-];
+    isOpen.value = !isOpen.value
+}
 </script>
 
 <style scoped lang="postcss">
