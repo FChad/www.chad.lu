@@ -8,9 +8,9 @@ const { navLinks, getLink } = useNavigation()
 
 // Add proper typing for links
 interface NavLink {
-  to: string
-  icon: string
-  name: string
+    to: string
+    icon: string
+    name: string
 }
 
 // Example of getting specific links
@@ -25,36 +25,33 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                 <div class="flex flex-col gap-10 items-center justify-center overflow-hidden">
                     <h1 class="flex flex-col w-full gap-4 items-center justify-center font-bold text-white ">
                         <span class="text-xl lg:text-3xl uppercase">
-                            Welcome to
+                            {{ $t('home.welcome') }}
                         </span>
                         <span class="text-3xl lg:text-6xl uppercase flex items-center gap-3">
-                            my
+                            {{ $t('home.my') }}
                             <span
                                 class="bg-gradient-to-r from-rose-500 via-violet-600 to-indigo-600 dark:from-rose-400 dark:via-violet-400 dark:to-indigo-400 bg-clip-text text-transparent">
-                                portfolio
+                                {{ $t('home.portfolio') }}
                             </span>
-                            page!
+                            {{ $t('home.page') }}
                         </span>
                     </h1>
                     <div class="w-full max-w-[80%] md:max-w-[50%]">
                         <div class="flex flex-col items-center gap-5 rounded-lg p-3 font-bold">
-                            <p class="text-lg  text-center text-white">
-                                Here, you will find a showcase of my work, skills, and projects. Feel free to explore
-                                and learn more about what I do. Enjoy your stay!
+                            <p class="text-lg text-center text-white">
+                                {{ $t('home.description') }}
                             </p>
                             <div class="flex items-center justify-start gap-4">
-                                <button 
+                                <button
                                     class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-colors duration-200"
-                                    :aria-label="$t(aboutLink?.name)"
-                                >
+                                    :aria-label="$t(aboutLink?.name)">
                                     <NuxtLink class="flex items-center gap-1" :to="aboutLink?.to">
                                         <Icon :name="aboutLink?.icon" class="text-xl" /> {{ $t(aboutLink?.name) }}
                                     </NuxtLink>
                                 </button>
-                                <button 
+                                <button
                                     class="border border-white hover:bg-white hover:text-slate-900 text-white px-6 py-2 rounded-full transition-colors duration-200"
-                                    :aria-label="$t(projectsLink?.name)"
-                                >
+                                    :aria-label="$t(projectsLink?.name)">
                                     <NuxtLink class="flex items-center gap-1" :to="projectsLink?.to">
                                         <Icon :name="projectsLink?.icon" class="text-xl" /> {{ $t(projectsLink?.name) }}
                                     </NuxtLink>
@@ -65,12 +62,8 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                 </div>
             </div>
             <div class="absolute z-0 w-[110%] h-[110%] bg-slate-900 dark:text-slate-300">
-                <img 
-                    src="/img/luxemburg.jpg" 
-                    alt="Luxembourg city landscape"
-                    loading="eager"
-                    class="bg-cover w-full h-full brightness-125 dark:brightness-75 blur-[7px] opacity-90 object-cover z-0 transition-[filter] duration-300"
-                >
+                <img src="/img/luxemburg.jpg" alt="Luxembourg city landscape" loading="eager"
+                    class="bg-cover w-full h-full brightness-125 dark:brightness-75 blur-[7px] opacity-90 object-cover z-0 transition-[filter] duration-300">
             </div>
         </div>
     </div>
@@ -86,6 +79,7 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

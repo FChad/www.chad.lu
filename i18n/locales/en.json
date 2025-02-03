@@ -5,5 +5,12 @@
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to",
+    "my": "my",
+    "portfolio": "portfolio",
+    "page": "page!",
+    "description": "Here, you will find a showcase of my work, skills, and projects. Feel free to explore and learn more about what I do. Enjoy your stay!"
   }
 } 

@@ -5,5 +5,12 @@
     "skills": "Fähigkeiten",
     "projects": "Projekte",
     "contact": "Kontakt"
+  },
+  "home": {
+    "welcome": "Willkommen auf",
+    "my": "meiner",
+    "portfolio": "Portfolio",
+    "page": "Seite!",
+    "description": "Hier finden Sie eine Übersicht meiner Arbeit, Fähigkeiten und Projekte. Schauen Sie sich gerne um und erfahren Sie mehr über meine Tätigkeiten. Viel Spaß beim Erkunden!"
   }
 } 

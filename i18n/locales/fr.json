@@ -5,5 +5,12 @@
     "skills": "Compétences",
     "projects": "Projets",
     "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Bienvenue sur",
+    "my": "ma",
+    "portfolio": "portfolio",
+    "page": "page!",
+    "description": "Ici, vous trouverez une présentation de mon travail, mes compétences et mes projets. N'hésitez pas à explorer et à en apprendre davantage sur ce que je fais. Bonne visite!"
   }
 } 
