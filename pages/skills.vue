@@ -105,27 +105,27 @@ const skills = [
             <!-- Certifications Section -->
             <div
                 class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-4">
+                <h2 class="text-2xl font-bold flex items-center gap-3 mb-4">
                     <Icon :name="certifications.icon" class="h-7 w-7 text-blue-500" />
                     {{ certifications.title }}
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div v-for="cert in certifications.items" :key="cert.title"
-                        class="bg-gray-50 dark:bg-slate-700 p-5 rounded-xl group">
+                        class="bg-gray-50 dark:bg-slate-700 p-5 rounded-xl group flex flex-col">
                         <div class="flex gap-3 items-start">
                             <div class="flex-1">
-                                <h3 class="font-bold text-gray-900 dark:text-white group-hover:text-blue-500">{{
+                                <h3 class="font-bold group-hover:text-blue-500">{{
                                     cert.title }}</h3>
                                 <p class="text-gray-600 dark:text-gray-300 mt-2">{{ cert.details }}</p>
                             </div>
                             <span
-                                class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
+                                class="text-sm font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-200">
                                 {{ cert.year }}
                             </span>
                         </div>
-                        <div class="mt-4 text-right">
+                        <div class="mt-auto pt-4 text-right">
                             <a :href="cert.link" target="_blank"
-                                class="inline-flex items-center text-sm text-blue-500 hover:text-blue-700">
+                                class="inline-flex items-center text-sm text-blue-400 dark:text-blue-300 hover:text-blue-600 dark:hover:text-blue-400">
                                 More Information
                                 <Icon name="heroicons:arrow-right" class="ml-1 h-4 w-4" />
                             </a>
@@ -137,12 +137,12 @@ const skills = [
             <!-- Skills Categories -->
             <div v-for="category in skills" :key="category.title"
                 class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{{ category.title }}</h2>
+                <h2 class="text-2xl font-bold mb-6">{{ category.title }}</h2>
                 <div class="flex flex-wrap gap-4">
                     <div v-for="skill in category.items" :key="skill.name"
                         class="group flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 dark:bg-slate-700 hover:bg-blue-50 dark:hover:bg-slate-600">
                         <img class="h-6 w-6" :src="skill.img" :alt="skill.name">
-                        <span class="font-medium text-gray-900 dark:text-white">{{ skill.name }}</span>
+                        <span class="font-medium">{{ skill.name }}</span>
                     </div>
                 </div>
             </div>

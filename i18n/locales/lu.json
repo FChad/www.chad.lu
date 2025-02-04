@@ -6,11 +6,86 @@
     "projects": "Projeten",
     "contact": "Kontakt"
   },
+  "languages": {
+    "luxembourgish": "Lëtzebuergesch",
+    "german": "Däitsch",
+    "english": "Englesch",
+    "french": "Franséisch"
+  },
   "home": {
     "welcome": "Wëllkomm op",
     "my": "menger",
     "portfolio": "Portfolio",
     "page": "Säit!",
     "description": "Hei fannt Dir eng Iwwersiicht vu menger Aarbecht, menge Fäegkeeten a Projeten. Fillt Iech fräi fir ze entdecken a méi iwwer meng Aarbecht ze léieren. Vill Spaass beim Entdecken!"
+  },
+  "about": {
+    "languages": "Sproochen",
+    "driversLicense": "Führerschäin",
+    "manualTransmission": "Manuell Transmissioun",
+    "cleanDrivingRecord": "Propper Führerschäin",
+    "professionalJourney": "Berufflech Rees",
+    "specialExperiences": "Speziell Erfarungen",
+    "sections": {
+      "aboutMe": {
+        "title": "Iwwer mech",
+        "content": "Mäin Numm ass Chad Feierstein, an Technologie ass meng grouss Passioun. Vun klengem un begeeschtert mech d'Konscht, komplex Erausfuerderungen duerch innovativ digital Léisungen ze meeschteren. Dës Faszinatioun motivéiert mech all Dag, mäi Wëssen ze erweideren an nei Horizonter ze entdecken."
+      },
+      "career": {
+        "title": "Mäi Wee",
+        "content": "Mäi fachleche Wee ëmfaasst eng fundéiert Ausbildung als IT-Techniker souwéi en héijen Ofschloss (BTS) am Beräich Cloud Computing. Dës akademesch Lafbunn, ergänzt duerch praktesch Erfarungen, huet mir e komplette Verständnis fir zentral IT-Beräicher vermëttelt."
+      },
+      "passion": {
+        "title": "Passioun fir Technologie",
+        "content": "Meng Passioun gëlt der Webentwicklung a Prozessautomatisatioun. Mat Begeeschterung entwéckelen ech personaliséiert Webapplikatiounen an implementéieren effizient Serverléisungen."
+      },
+      "hobbies": {
+        "title": "Hobbyen an Interessen",
+        "content": "Niewent der digitaler Welt genéissen ech wäertvoll Momenter am Krees vu menger Famill, zu där och eis dräi pelzeg Begleeder gehéieren. Regelméisseg Treffe mat Frënn a gelegentlech Gaming-Sessiounen suerge fir de perfekten Ausgläich zu mengem technologesche Alldag."
+      }
+    },
+    "timeline": {
+      "2024": {
+        "title": "Web-Entwéckler bei Rotyre SARL",
+        "description": "Verantwortlech fir d'Maintenance an d'Weiderentwécklung vun der Websäit mullerpneus.lu."
+      },
+      "2023": {
+        "title": "Zertifizéierung: Allgemeng Eignungsprüfung",
+        "description": "Erfollegräichen Ofschloss vun der staatlecher Prüfung fir den ëffentleche Secteur."
+      },
+      "2021": {
+        "title": "Diplom am Cloud Computing (BTS)",
+        "description": "Héijen techneschen Ofschloss am Beräich Cloud Computing am Lycée Guillaume Kroll."
+      },
+      "2020": {
+        "title": "Vakanzaarbecht als IT-Techniker",
+        "description": "Tätegkeet am Lycée Guillaume Kroll: Installatioun vu MIXvoip-Telefonen, Netzwierkmanagement."
+      },
+      "2019": {
+        "title": "Diplom als IT-Techniker",
+        "description": "Ofschloss am Lycée Guillaume Kroll zu Esch-Uelzecht mat der Bewäertung 'Gutt'."
+      }
+    },
+    "gallery": {
+      "helicopter": "Rundfluch mat engem Helikopter",
+      "skydiving": "Fallschirmsprong iwwer Lëtzebuerg",
+      "tomorrowland": "Tomorrowland Belsch 2025"
+    },
+    "profile": {
+      "nationality": "Lëtzebuergesch",
+      "location": "Rëmeleng",
+      "status": "Single",
+      "age": "25 Joer"
+    },
+    "languageLevels": {
+      "native": "Mammesprooch",
+      "advanced": "Fortgeschratt",
+      "intermediate": "Mëttel"
+    },
+    "license": {
+      "category": "Kategorie B",
+      "since": "Zënter 2023"
+    },
+    "sendMessage": "Message schécken"
   }
 } 

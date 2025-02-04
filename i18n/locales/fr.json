@@ -6,11 +6,86 @@
     "projects": "Projets",
     "contact": "Contact"
   },
+  "languages": {
+    "luxembourgish": "Luxembourgeois",
+    "german": "Allemand",
+    "english": "Anglais",
+    "french": "Français"
+  },
   "home": {
     "welcome": "Bienvenue sur",
     "my": "ma",
     "portfolio": "portfolio",
     "page": "page!",
     "description": "Ici, vous trouverez une présentation de mon travail, mes compétences et mes projets. N'hésitez pas à explorer et à en apprendre davantage sur ce que je fais. Bonne visite!"
+  },
+  "about": {
+    "languages": "Langues",
+    "driversLicense": "Permis de conduire",
+    "manualTransmission": "Transmission manuelle",
+    "cleanDrivingRecord": "Dossier de conduite vierge",
+    "professionalJourney": "Parcours professionnel",
+    "specialExperiences": "Expériences spéciales",
+    "sections": {
+      "aboutMe": {
+        "title": "À propos de moi",
+        "content": "Je m'appelle Chad Feierstein, et la technologie est ma grande passion. Depuis mon plus jeune âge, je suis fasciné par l'art de relever des défis complexes grâce à des solutions numériques innovantes. Cette fascination me motive quotidiennement à élargir mes connaissances et à explorer de nouveaux horizons."
+      },
+      "career": {
+        "title": "Mon parcours",
+        "content": "Mon parcours professionnel comprend une solide formation de technicien informatique et un diplôme supérieur (BTS) en Cloud Computing. Ce parcours académique, complété par une expérience pratique, m'a donné une compréhension approfondie des domaines clés de l'informatique."
+      },
+      "passion": {
+        "title": "Passion pour la technologie",
+        "content": "Ma passion réside dans le développement web et l'automatisation des processus. Je développe avec enthousiasme des applications web personnalisées et mets en œuvre des solutions serveur efficaces."
+      },
+      "hobbies": {
+        "title": "Loisirs et intérêts",
+        "content": "En dehors du monde numérique, je profite de moments précieux en famille, qui comprend nos trois compagnons à fourrure. Les rencontres régulières avec des amis et les sessions de jeux occasionnelles offrent un équilibre parfait à mon quotidien axé sur la technologie."
+      }
+    },
+    "timeline": {
+      "2024": {
+        "title": "Développeur Web chez Rotyre SARL",
+        "description": "Responsable de la maintenance et du développement du site mullerpneus.lu."
+      },
+      "2023": {
+        "title": "Certification : Test d'aptitude générale",
+        "description": "Réussite de l'examen d'État pour le secteur public."
+      },
+      "2021": {
+        "title": "Diplôme en Cloud Computing (BTS)",
+        "description": "Diplôme technique supérieur en Cloud Computing au Lycée Guillaume Kroll."
+      },
+      "2020": {
+        "title": "Job d'été comme technicien IT",
+        "description": "Travail au Lycée Guillaume Kroll : Installation de téléphones MIXvoip, gestion réseau."
+      },
+      "2019": {
+        "title": "Diplôme de technicien IT",
+        "description": "Diplômé du Lycée Guillaume Kroll à Esch-sur-Alzette avec la mention 'Bien'."
+      }
+    },
+    "gallery": {
+      "helicopter": "Tour en hélicoptère",
+      "skydiving": "Saut en parachute au-dessus du Luxembourg",
+      "tomorrowland": "Tomorrowland Belgique 2025"
+    },
+    "profile": {
+      "nationality": "Luxembourgeois",
+      "location": "Rumelange",
+      "status": "Célibataire",
+      "age": "25 ans"
+    },
+    "languageLevels": {
+      "native": "Langue maternelle",
+      "advanced": "Avancé",
+      "intermediate": "Intermédiaire"
+    },
+    "license": {
+      "category": "Catégorie B",
+      "since": "Depuis 2023"
+    },
+    "sendMessage": "Envoyer un message"
   }
 } 
