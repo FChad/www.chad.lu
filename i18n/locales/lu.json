@@ -45,23 +45,28 @@
       }
     },
     "timeline": {
-      "2024": {
+      "5": {
+        "year": "2024",
         "title": "Web-Entwéckler bei Rotyre SARL",
         "description": "Verantwortlech fir d'Maintenance an d'Weiderentwécklung vun der Websäit mullerpneus.lu."
       },
-      "2023": {
+      "4": {
+        "year": "2023",
         "title": "Zertifizéierung: Allgemeng Eignungsprüfung",
         "description": "Erfollegräichen Ofschloss vun der staatlecher Prüfung fir den ëffentleche Secteur."
       },
-      "2021": {
+      "3": {
+        "year": "2021",
         "title": "Diplom am Cloud Computing (BTS)",
         "description": "Héijen techneschen Ofschloss am Beräich Cloud Computing am Lycée Guillaume Kroll."
       },
-      "2020": {
+      "2": {
+        "year": "2020",
         "title": "Vakanzaarbecht als IT-Techniker",
         "description": "Tätegkeet am Lycée Guillaume Kroll: Installatioun vu MIXvoip-Telefonen, Netzwierkmanagement."
       },
-      "2019": {
+      "1": {
+        "year": "2019",
         "title": "Diplom als IT-Techniker",
         "description": "Ofschloss am Lycée Guillaume Kroll zu Esch-Uelzecht mat der Bewäertung 'Gutt'."
       }
@@ -87,5 +92,45 @@
       "since": "Zënter 2023"
     },
     "sendMessage": "Message schécken"
+  },
+  "certifications": {
+    "title": "Zertifizéierungen",
+    "items": {
+      "aptitudeTest": {
+        "title": "Den allgemenge Eignungstest",
+        "description": "Den allgemenge Eignungstest fir de staatleche Secteur (Administratioun)"
+      },
+      "cyberOps": {
+        "title": "Cisco Certified CyberOps Associate",
+        "description": "Kursofschloss"
+      },
+      "ccna3": {
+        "title": "Cisco Certified Network Associate 3",
+        "description": "7.0 Enterprise-Netzwierker, Sécherheet an Automatiséierung"
+      },
+      "ccna2": {
+        "title": "Cisco Certified Network Associate 2",
+        "description": "7.0 Switching, Routing a Wireless-Grondlagen"
+      },
+      "ccna1": {
+        "title": "Cisco Certified Network Associate 1",
+        "description": "7.0 Aféierung an Netzwierker"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist 2016",
+        "description": "PowerPoint, Word, Word Expert, Outlook, Excel"
+      }
+    }
+  },
+  "skills": {
+    "programming": "Programméierung",
+    "operatingSystems": "Betribssystemer",
+    "officeSoftware": "Bürossoftware",
+    "virtualization": "Virtualiséierung",
+    "moreInformation": "Méi Informatiounen"
+  },
+  "projects": {
+    "title": "Projeten",
+    "description": "Entdeckt e puer vu menge rezenten Aarbechten a perséinleche Projeten"
   }
 } 

@@ -11,34 +11,10 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce solution built with Vue 3 and Node.js, featuring real-time inventory management and secure payment processing.",
+        title: "Example Project",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         image: "/img/no_image_available.jpg",
-        tags: ["Vue", "Node.js", "MongoDB", "Stripe"],
-        link: "#"
-    },
-    {
-        id: 2,
-        title: "AI Chat Assistant",
-        description: "An intelligent chatbot powered by machine learning, capable of natural language processing and contextual responses.",
-        image: "/img/no_image_available.jpg",
-        tags: ["Python", "TensorFlow", "NLP", "API"],
-        link: "#"
-    },
-    {
-        id: 3,
-        title: "Smart Home Dashboard",
-        description: "A responsive dashboard for monitoring and controlling IoT devices, with real-time data visualization.",
-        image: "/img/no_image_available.jpg",
-        tags: ["IoT", "Vue", "WebSocket", "Charts"],
-        link: "#"
-    },
-    {
-        id: 4,
-        title: "Mobile Fitness App",
-        description: "A cross-platform fitness tracking application with workout plans, progress monitoring, and social features.",
-        image: "/img/no_image_available.jpg",
-        tags: ["React Native", "Firebase", "Redux", "Health API"],
+        tags: ["HTML", "JavaScript", "CSS", "PHP", "SQL"],
         link: "#"
     }
 ];
@@ -50,9 +26,9 @@ const projects: Project[] = [
             <!-- Header Card -->
             <div
                 class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
-                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{{ $t('projects.title') }}</h1>
                 <p class="text-gray-600 dark:text-gray-300">
-                    Explore some of my recent work and personal projects
+                    {{ $t('projects.description') }}
                 </p>
             </div>
 

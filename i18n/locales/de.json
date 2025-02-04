@@ -45,23 +45,28 @@
       }
     },
     "timeline": {
-      "2024": {
+      "5": {
+        "year": "2024",
         "title": "Web-Entwickler bei Rotyre SARL",
         "description": "Verantwortlich für die Wartung und Weiterentwicklung der Webseite mullerpneus.lu."
       },
-      "2023": {
+      "4": {
+        "year": "2023",
         "title": "Zertifizierung: Allgemeine Eignungsprüfung",
         "description": "Erfolgreicher Abschluss der staatlichen Prüfung für den öffentlichen Sektor."
       },
-      "2021": {
+      "3": {
+        "year": "2021",
         "title": "Diplom in Cloud Computing (BTS)",
         "description": "Höherer technischer Abschluss im Bereich Cloud Computing am Lycée Guillaume Kroll."
       },
-      "2020": {
+      "2": {
+        "year": "2020",
         "title": "Ferienjob als IT-Techniker",
         "description": "Tätigkeit am Lycée Guillaume Kroll: Installation von MIXvoip-Telefonen, Netzwerkmanagement."
       },
-      "2019": {
+      "1": {
+        "year": "2019",
         "title": "Diplom als IT-Techniker",
         "description": "Abschluss am Lycée Guillaume Kroll in Esch-sur-Alzette mit der Bewertung 'Gut'."
       }
@@ -87,5 +92,45 @@
       "since": "Seit 2023"
     },
     "sendMessage": "Nachricht senden"
+  },
+  "certifications": {
+    "title": "Zertifizierungen",
+    "items": {
+      "aptitudeTest": {
+        "title": "Die allgemeine Eignungsprüfung",
+        "description": "Die allgemeine Eignungsprüfung für den staatlichen Sektor (Verwaltung)"
+      },
+      "cyberOps": {
+        "title": "Cisco Certified CyberOps Associate",
+        "description": "Kursabschluss"
+      },
+      "ccna3": {
+        "title": "Cisco Certified Network Associate 3",
+        "description": "7.0 Enterprise-Netzwerke, Sicherheit und Automatisierung"
+      },
+      "ccna2": {
+        "title": "Cisco Certified Network Associate 2",
+        "description": "7.0 Switching, Routing und Wireless-Grundlagen"
+      },
+      "ccna1": {
+        "title": "Cisco Certified Network Associate 1",
+        "description": "7.0 Einführung in Netzwerke"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist 2016",
+        "description": "PowerPoint, Word, Word Expert, Outlook, Excel"
+      }
+    }
+  },
+  "skills": {
+    "programming": "Programmierung",
+    "operatingSystems": "Betriebssysteme",
+    "officeSoftware": "Bürosoftware",
+    "virtualization": "Virtualisierung",
+    "moreInformation": "Weitere Informationen"
+  },
+  "projects": {
+    "title": "Projekte",
+    "description": "Entdecken Sie einige meiner aktuellen Arbeiten und persönlichen Projekte"
   }
 } 

@@ -45,23 +45,28 @@
       }
     },
     "timeline": {
-      "2024": {
+      "5": {
+        "year": "2024",
         "title": "Développeur Web chez Rotyre SARL",
         "description": "Responsable de la maintenance et du développement du site mullerpneus.lu."
       },
-      "2023": {
+      "4": {
+        "year": "2023",
         "title": "Certification : Test d'aptitude générale",
         "description": "Réussite de l'examen d'État pour le secteur public."
       },
-      "2021": {
+      "3": {
+        "year": "2021",
         "title": "Diplôme en Cloud Computing (BTS)",
         "description": "Diplôme technique supérieur en Cloud Computing au Lycée Guillaume Kroll."
       },
-      "2020": {
+      "2": {
+        "year": "2020",
         "title": "Job d'été comme technicien IT",
         "description": "Travail au Lycée Guillaume Kroll : Installation de téléphones MIXvoip, gestion réseau."
       },
-      "2019": {
+      "1": {
+        "year": "2019",
         "title": "Diplôme de technicien IT",
         "description": "Diplômé du Lycée Guillaume Kroll à Esch-sur-Alzette avec la mention 'Bien'."
       }
@@ -87,5 +92,45 @@
       "since": "Depuis 2023"
     },
     "sendMessage": "Envoyer un message"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "items": {
+      "aptitudeTest": {
+        "title": "L'épreuve d'aptitude générale",
+        "description": "L'épreuve d'aptitude générale secteur étatique (administration)"
+      },
+      "cyberOps": {
+        "title": "Cisco Certified CyberOps Associate",
+        "description": "Achèvement du cours"
+      },
+      "ccna3": {
+        "title": "Cisco Certified Network Associate 3",
+        "description": "7.0 Réseaux d'entreprise, Sécurité et Automatisation"
+      },
+      "ccna2": {
+        "title": "Cisco Certified Network Associate 2",
+        "description": "7.0 Commutation, Routage et Essentiels sans fil"
+      },
+      "ccna1": {
+        "title": "Cisco Certified Network Associate 1",
+        "description": "7.0 Introduction aux réseaux"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist 2016",
+        "description": "PowerPoint, Word, Word Expert, Outlook, Excel"
+      }
+    }
+  },
+  "skills": {
+    "programming": "Programmation",
+    "operatingSystems": "Systèmes d'exploitation",
+    "officeSoftware": "Logiciels de bureau",
+    "virtualization": "Virtualisation",
+    "moreInformation": "Plus d'informations"
+  },
+  "projects": {
+    "title": "Projets",
+    "description": "Découvrez certains de mes travaux récents et projets personnels"
   }
 } 

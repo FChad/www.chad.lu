@@ -45,23 +45,28 @@
       }
     },
     "timeline": {
-      "2024": {
+      "5": {
+        "year": "2024",
         "title": "Web Developer at Rotyre SARL",
         "description": "Responsible for maintaining and developing the website mullerpneus.lu."
       },
-      "2023": {
+      "4": {
+        "year": "2023",
         "title": "Certification: General Aptitude Test",
         "description": "Successfully completed the state examination for the public sector."
       },
-      "2021": {
+      "3": {
+        "year": "2021",
         "title": "Diploma in Cloud Computing (BTS)",
         "description": "Higher technical degree in Cloud Computing at Lycée Guillaume Kroll."
       },
-      "2020": {
+      "2": {
+        "year": "2020",
         "title": "Summer Job as IT Technician",
         "description": "Work at Lycée Guillaume Kroll: Installation of MIXvoip phones, network management."
       },
-      "2019": {
+      "1": {
+        "year": "2019",
         "title": "IT Technician Diploma",
         "description": "Graduated from Lycée Guillaume Kroll in Esch-sur-Alzette with a 'Good' rating."
       }
@@ -87,5 +92,45 @@
       "since": "Since 2023"
     },
     "sendMessage": "Send Message"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "items": {
+      "aptitudeTest": {
+        "title": "The General Aptitude Test",
+        "description": "The general aptitude test for the state sector (administration)"
+      },
+      "cyberOps": {
+        "title": "Cisco Certified CyberOps Associate",
+        "description": "Course Completion"
+      },
+      "ccna3": {
+        "title": "Cisco Certified Network Associate 3",
+        "description": "7.0 Enterprise Networking, Security, and Automation"
+      },
+      "ccna2": {
+        "title": "Cisco Certified Network Associate 2",
+        "description": "7.0 Switching, Routing, and Wireless Essentials"
+      },
+      "ccna1": {
+        "title": "Cisco Certified Network Associate 1",
+        "description": "7.0 Introduction to Networks"
+      },
+      "mos": {
+        "title": "Microsoft Office Specialist 2016",
+        "description": "PowerPoint, Word, Word Expert, Outlook, Excel"
+      }
+    }
+  },
+  "skills": {
+    "programming": "Programming",
+    "operatingSystems": "Operating Systems",
+    "officeSoftware": "Office Software",
+    "virtualization": "Virtualization",
+    "moreInformation": "More Information"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Explore some of my recent work and personal projects"
   }
 } 

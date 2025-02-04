@@ -31,6 +31,39 @@ const languages = [
     }
 ];
 
+const timelineEvents = [
+    {
+        year: t('about.timeline.5.year'),
+        title: t('about.timeline.5.title'),
+        description: t('about.timeline.5.description'),
+        isPresent: true
+    },
+    {
+        year: t('about.timeline.4.year'),
+        title: t('about.timeline.4.title'),
+        description: t('about.timeline.4.description'),
+        isPresent: false
+    },
+    {
+        year: t('about.timeline.3.year'),
+        title: t('about.timeline.3.title'),
+        description: t('about.timeline.3.description'),
+        isPresent: false
+    },
+    {
+        year: t('about.timeline.2.year'),
+        title: t('about.timeline.2.title'),
+        description: t('about.timeline.2.description'),
+        isPresent: false
+    },
+    {
+        year: t('about.timeline.1.year'),
+        title: t('about.timeline.1.title'),
+        description: t('about.timeline.1.description'),
+        isPresent: false
+    }
+];
+
 const aboutSections = [
     {
         key: 'aboutMe',
@@ -217,31 +250,29 @@ const aboutSections = [
                                 </div>
 
                                 <div class="space-y-6">
-                                    <template v-for="(year, index) in ['2024', '2023', '2021', '2020', '2019']"
-                                        :key="year">
+                                    <template v-for="event in timelineEvents" :key="event.year">
                                         <div
                                             class="relative flex gap-4 lg:grid lg:grid-cols-[1fr_0_1fr] lg:items-start lg:gap-0">
                                             <!-- Dot -->
                                             <div
                                                 class="absolute -translate-x-[6px] top-5 lg:col-start-2 lg:z-10 flex items-center justify-center">
                                                 <div class="w-4 h-4 rounded-full border-4 border-white dark:border-slate-800"
-                                                    :class="year === '2024' ? 'bg-green-500' : 'bg-blue-500'">
+                                                    :class="event.isPresent ? 'bg-green-500' : 'bg-blue-500'">
                                                 </div>
                                             </div>
 
                                             <!-- Content -->
                                             <div class="ml-8 lg:ml-0" :class="{
-                                                'lg:col-start-1 lg:text-right lg:pr-8': index % 2 === 0,
-                                                'lg:col-start-3 lg:pl-8': index % 2 === 1
+                                                'lg:col-start-1 lg:text-right lg:pr-8': timelineEvents.indexOf(event) % 2 === 0,
+                                                'lg:col-start-3 lg:pl-8': timelineEvents.indexOf(event) % 2 === 1
                                             }">
                                                 <div class="backdrop-blur-sm p-4 rounded-lg">
                                                     <span class="font-bold"
-                                                        :class="year === '2024' ? 'text-green-500' : 'text-blue-500'">{{
-                                                            year }}</span>
-                                                    <h3 class="font-bold mt-1">{{ $t(`about.timeline.${year}.title`) }}
-                                                    </h3>
+                                                        :class="event.isPresent ? 'text-green-500' : 'text-blue-500'">{{
+                                                            event.year }}</span>
+                                                    <h3 class="font-bold mt-1">{{ event.title }}</h3>
                                                     <p class="text-gray-600 dark:text-gray-300 mt-1">{{
-                                                        $t(`about.timeline.${year}.description`) }}</p>
+                                                        event.description }}</p>
                                                 </div>
                                             </div>
                                         </div>
