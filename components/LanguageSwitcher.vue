@@ -1,24 +1,24 @@
 <script lang="ts" setup>
-const { locale, locales, setLocale } = useI18n();
+const { locale, locales, setLocale, t } = useI18n();
 const isOpen = ref(false);
 const selectRef = ref<HTMLDivElement | null>(null);
 const activeIndex = ref(0);
 
 const languageMap = {
     en: {
-        name: 'English',
+        name: 'languages.english',
         flag: '🇬🇧'
     },
     fr: {
-        name: 'Français',
+        name: 'languages.french',
         flag: '🇫🇷'
     },
     lu: {
-        name: 'Lëtzebuergesch',
+        name: 'languages.luxembourgish',
         flag: '🇱🇺'
     },
     de: {
-        name: 'Deutsch',
+        name: 'languages.german',
         flag: '🇩🇪'
     }
 };
@@ -117,7 +117,7 @@ onUnmounted(() => {
         @blur="handleBlur" tabindex="0">
         <!-- Select Button -->
         <button type="button" :aria-expanded="isOpen" aria-haspopup="listbox"
-            :aria-label="'Select language. Current language is ' + languageMap[locale].name"
+            :aria-label="'Select language. Current language is ' + t(languageMap[locale].name)"
             class="flex items-center h-8 gap-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent p-1 w-fit justify-center"
             @click="isOpen = !isOpen">
             <Icon :name="`circle-flags:${locale}`" class="w-5 h-5 flex-shrink-0" />
@@ -141,7 +141,7 @@ onUnmounted(() => {
                         'bg-slate-50 dark:bg-slate-800': locale === lang.code || activeIndex === index
                     }">
                     <Icon :name="`circle-flags:${lang.code}`" class="w-5 h-5 flex-shrink-0" size="20" />
-                    <span>{{ languageMap[lang.code].name }}</span>
+                    <span>{{ t(languageMap[lang.code].name) }}</span>
                 </button>
             </div>
         </Transition>
