@@ -44,7 +44,7 @@ const aboutSections = [
     {
         title: 'Leidenschaft für Technologie',
         icon: 'mdi:laptop',
-        content: `Mein Herz schlägt besonders für die Webentwicklung, Prozessautomatisierung und moderne Serververwaltung. Mit Begeisterung widme ich mich der Realisierung anspruchsvoller Projekte, sei es die Konzeption innovativer Systeme, die Entwicklung maßgeschneiderter Webanwendungen oder die Implementierung effizienter Serverlösungen.`
+        content: `Meine Leidenschaft gilt der Webentwicklung und Prozessautomatisierung. Mit Begeisterung entwickle ich maßgeschneiderte Webanwendungen und implementiere effiziente Serverlösungen.`
     },
     {
         title: 'Hobbys und Interessen',
