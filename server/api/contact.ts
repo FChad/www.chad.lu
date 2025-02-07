@@ -42,7 +42,7 @@ export default defineEventHandler(async (event) => {
         const toEmail = config.resend.toEmail;
 
         await resend.emails.send({
-            from: 'Contact Form <mail@chad.lu>',
+            from: `Contact Form <${config.resend.toEmail}>`,
             replyTo: email,
             to: toEmail,
             subject: `Contact Form: ${subject}`,
