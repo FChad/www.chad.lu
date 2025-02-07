@@ -132,5 +132,64 @@
   "projects": {
     "title": "Projects",
     "description": "Explore some of my recent work and personal projects"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or feedback? I'm here to help. Send us a message, and I'll respond within 24 hours.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "subjectPlaceholder": "Enter the subject",
+      "messagePlaceholder": "What would you like to say?",
+      "sendButton": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "social": {
+      "title": "Connect With Me",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Professional"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Code"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "subtitle": "Photo Updates"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "subtitle": "Community"
+      }
+    },
+    "validation": {
+      "required": "This field is required",
+      "name": {
+        "min": "Name must be at least 2 characters",
+        "max": "Name cannot exceed 50 characters",
+        "format": "Name can only contain letters, spaces, and hyphens"
+      },
+      "email": {
+        "valid": "Please enter a valid email",
+        "max": "Email cannot exceed 100 characters",
+        "format": "Please enter a valid email address"
+      },
+      "subject": {
+        "min": "Subject must be at least 5 characters",
+        "max": "Subject cannot exceed 100 characters",
+        "format": "Subject can only contain letters, numbers, and basic punctuation"
+      },
+      "message": {
+        "min": "Message must be at least 30 characters",
+        "max": "Message cannot exceed 1000 characters"
+      }
+    }
   }
 } 

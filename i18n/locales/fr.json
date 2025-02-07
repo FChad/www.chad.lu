@@ -132,5 +132,64 @@
   "projects": {
     "title": "Projets",
     "description": "Découvrez certains de mes travaux récents et projets personnels"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Vous avez des questions ou des commentaires ? Je suis là pour vous aider. Envoyez-moi un message, je répondrai sous 24 heures.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "namePlaceholder": "Entrez votre nom",
+      "emailPlaceholder": "Entrez votre email",
+      "subjectPlaceholder": "Entrez le sujet",
+      "messagePlaceholder": "Que souhaitez-vous dire ?",
+      "sendButton": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer."
+    },
+    "social": {
+      "title": "Suivez-moi",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Professionnel"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Code"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "subtitle": "Photos"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "subtitle": "Communauté"
+      }
+    },
+    "validation": {
+      "required": "Ce champ est obligatoire",
+      "name": {
+        "min": "Le nom doit contenir au moins 2 caractères",
+        "max": "Le nom ne peut pas dépasser 50 caractères",
+        "format": "Le nom ne peut contenir que des lettres, des espaces et des traits d'union"
+      },
+      "email": {
+        "valid": "Veuillez entrer un email valide",
+        "max": "L'email ne peut pas dépasser 100 caractères",
+        "format": "Veuillez entrer une adresse email valide"
+      },
+      "subject": {
+        "min": "Le sujet doit contenir au moins 5 caractères",
+        "max": "Le sujet ne peut pas dépasser 100 caractères",
+        "format": "Le sujet ne peut contenir que des lettres, des chiffres et la ponctuation de base"
+      },
+      "message": {
+        "min": "Le message doit contenir au moins 30 caractères",
+        "max": "Le message ne peut pas dépasser 1000 caractères"
+      }
+    }
   }
 } 

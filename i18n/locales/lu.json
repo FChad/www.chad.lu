@@ -132,5 +132,64 @@
   "projects": {
     "title": "Projeten",
     "description": "Entdeckt e puer vu menge rezenten Aarbechten a perséinleche Projeten"
+  },
+  "contact": {
+    "title": "Kontaktéiert mech",
+    "subtitle": "Dir hutt Froen oder Feedback? Ech si fir Iech do. Schéckt mir e Message, an ech äntweren Iech bannent 24 Stonnen.",
+    "form": {
+      "name": "Numm",
+      "email": "E-Mail",
+      "subject": "Sujet",
+      "message": "Message",
+      "namePlaceholder": "Gitt Ären Numm an",
+      "emailPlaceholder": "Gitt Är E-Mail an",
+      "subjectPlaceholder": "Gitt de Sujet an",
+      "messagePlaceholder": "Wat wëllt Dir matdeelen?",
+      "sendButton": "Message schécken",
+      "sending": "Gëtt geschéckt...",
+      "success": "Message erfollegräich geschéckt!",
+      "error": "Message konnt net geschéckt ginn. Probéiert w.e.g. nach eng Kéier."
+    },
+    "social": {
+      "title": "Bleift a Kontakt",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Berufflech"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Code"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "subtitle": "Fotoen"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "subtitle": "Communautéit"
+      }
+    },
+    "validation": {
+      "required": "Dëst Feld ass obligatoresch",
+      "name": {
+        "min": "Den Numm muss mindestens 2 Zeechen hunn",
+        "max": "Den Numm däerf maximal 50 Zeechen hunn",
+        "format": "Den Numm däerf nëmme Buschtawen, Espacen an Bindestrécher enthalen"
+      },
+      "email": {
+        "valid": "Gitt w.e.g. eng gëlteg E-Mail-Adress an",
+        "max": "D'E-Mail-Adress däerf maximal 100 Zeechen hunn",
+        "format": "Gitt w.e.g. eng gëlteg E-Mail-Adress an"
+      },
+      "subject": {
+        "min": "De Sujet muss mindestens 5 Zeechen hunn",
+        "max": "De Sujet däerf maximal 100 Zeechen hunn",
+        "format": "De Sujet däerf nëmme Buschtawen, Zuelen a Punktuatioun enthalen"
+      },
+      "message": {
+        "min": "De Message muss mindestens 30 Zeechen hunn",
+        "max": "De Message däerf maximal 1000 Zeechen hunn"
+      }
+    }
   }
 } 

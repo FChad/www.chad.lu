@@ -132,5 +132,64 @@
   "projects": {
     "title": "Projekte",
     "description": "Entdecken Sie einige meiner aktuellen Arbeiten und persönlichen Projekte"
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Haben Sie Fragen oder Feedback? Ich bin hier, um zu helfen. Senden Sie mir eine Nachricht, und ich werde innerhalb von 24 Stunden antworten.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "subjectPlaceholder": "Geben Sie den Betreff ein",
+      "messagePlaceholder": "Was möchten Sie mitteilen?",
+      "sendButton": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
+    "social": {
+      "title": "Bleiben Sie in Kontakt",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Beruflich"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Code"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "subtitle": "Fotos"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "subtitle": "Community"
+      }
+    },
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "name": {
+        "min": "Der Name muss mindestens 2 Zeichen lang sein",
+        "max": "Der Name darf maximal 50 Zeichen lang sein",
+        "format": "Der Name darf nur Buchstaben, Leerzeichen und Bindestriche enthalten"
+      },
+      "email": {
+        "valid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "max": "Die E-Mail-Adresse darf maximal 100 Zeichen lang sein",
+        "format": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+      },
+      "subject": {
+        "min": "Der Betreff muss mindestens 5 Zeichen lang sein",
+        "max": "Der Betreff darf maximal 100 Zeichen lang sein",
+        "format": "Der Betreff darf nur Buchstaben, Zahlen und grundlegende Satzzeichen enthalten"
+      },
+      "message": {
+        "min": "Die Nachricht muss mindestens 30 Zeichen lang sein",
+        "max": "Die Nachricht darf maximal 1000 Zeichen lang sein"
+      }
+    }
   }
 } 
