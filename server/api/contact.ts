@@ -27,24 +27,22 @@ const validationSchema = yup.object({
 
 export default defineEventHandler(async (event) => {
     const body = await readBody(event);
-    
+
     try {
         // Validiere die Eingabedaten
         await validationSchema.validate(body, { abortEarly: false });
-        
+
         const { name, email, subject, message } = body;
         const config = useRuntimeConfig();
 
         // Initialize Resend with API key
         const resend = new Resend(config.resend.apiKey);
 
-        // In development/test mode, always send to the verified email
-        const toEmail = process.env.NODE_ENV === 'development' 
-            ? 'feiersteinchad@gmail.com'  // Your verified email for testing
-            : 'mail@chad.lu';             // Production email
+        // Use email from environment variable
+        const toEmail = config.resend.toEmail;
 
         await resend.emails.send({
-            from: 'Contact Form <onboarding@resend.dev>',
+            from: 'Contact Form <mail@chad.lu>',
             replyTo: email,
             to: toEmail,
             subject: `Contact Form: ${subject}`,

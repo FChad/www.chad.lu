@@ -17,7 +17,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     resend: {
-      apiKey: process.env.RESEND_API_KEY
+      apiKey: process.env.RESEND_API_KEY,
+      toEmail: process.env.RESEND_TO_EMAIL
     }
   }
 })
