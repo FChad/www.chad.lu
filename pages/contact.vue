@@ -221,7 +221,7 @@ const onSubmit = handleSubmit(async (values) => {
                             class="group bg-gray-50 dark:bg-slate-800 p-4 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-900 transition-colors border border-gray-100 dark:border-slate-600">
                             <div class="flex items-center gap-3">
                                 <div
-                                    class="p-2.5 bg-blue-100 dark:bg-blue-900 rounded-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
+                                    class="p-2.5 flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
                                     <Icon name="mdi:linkedin" size="24" class="text-blue-600 dark:text-blue-400" />
                                 </div>
                                 <div>
@@ -237,7 +237,7 @@ const onSubmit = handleSubmit(async (values) => {
                             class="group bg-gray-50 dark:bg-slate-800 p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-slate-900 transition-colors border border-gray-100 dark:border-slate-600">
                             <div class="flex items-center gap-3">
                                 <div
-                                    class="p-2.5 bg-gray-200 dark:bg-gray-700 rounded-lg group-hover:bg-gray-300 dark:group-hover:bg-gray-600 transition-colors">
+                                    class="p-2.5 flex items-center justify-center w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg group-hover:bg-gray-300 dark:group-hover:bg-gray-600 transition-colors">
                                     <Icon name="mdi:github" size="24" class="text-gray-900 dark:text-gray-100" />
                                 </div>
                                 <div>
@@ -252,10 +252,12 @@ const onSubmit = handleSubmit(async (values) => {
                             class="group bg-gray-50 dark:bg-slate-800 p-4 rounded-xl hover:bg-pink-50 dark:hover:bg-slate-900 transition-colors border border-gray-100 dark:border-slate-600">
                             <div class="flex items-center gap-3">
                                 <div
-                                    class="p-2.5 bg-pink-100 dark:bg-pink-900 rounded-lg group-hover:bg-pink-200 dark:group-hover:bg-pink-800 transition-colors">
+                                    class="p-2.5 flex items-center justify-center w-10 h-10 bg-pink-100 dark:bg-pink-900 rounded-lg group-hover:bg-pink-200 dark:group-hover:bg-pink-800 transition-colors">
                                     <Icon name="mdi:instagram" size="24" class="text-pink-600 dark:text-pink-400" />
                                 </div>
+
                                 <div>
+
                                     <p class="font-medium text-gray-900 dark:text-white">{{
                                         t('contact.social.instagram.title') }}</p>
                                     <p class="text-sm text-gray-600 dark:text-gray-400">{{
@@ -268,7 +270,7 @@ const onSubmit = handleSubmit(async (values) => {
                             class="group bg-gray-50 dark:bg-slate-800 p-4 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-900 transition-colors border border-gray-100 dark:border-slate-600">
                             <div class="flex items-center gap-3">
                                 <div
-                                    class="p-2.5 bg-blue-100 dark:bg-blue-900 rounded-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
+                                    class="p-2.5 flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
                                     <Icon name="mdi:facebook" size="24" class="text-[#1877F2] dark:text-blue-400" />
                                 </div>
                                 <div>
