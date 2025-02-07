@@ -23,11 +23,11 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
         <div class="w-full min-h-full flex items-center justify-center ">
             <div class="flex flex-col items-center justify-center w-full h-full z-[1] overflow-hidden">
                 <div class="flex flex-col gap-10 items-center justify-center overflow-hidden">
-                    <h1 class="flex flex-col w-full gap-4 items-center justify-center font-bold text-white ">
+                    <h1 class="p-3 flex flex-col lg:w-full gap-4 items-center justify-center font-bold text-white ">
                         <span class="text-xl lg:text-3xl uppercase">
                             {{ $t('home.welcome') }}
                         </span>
-                        <span class="text-3xl lg:text-6xl uppercase flex items-center gap-3">
+                        <span class="text-2xl md:text-3xl lg:text-6xl uppercase flex items-center gap-3">
                             {{ $t('home.my') }}
                             <span
                                 class="bg-gradient-to-r from-rose-500 via-violet-600 to-indigo-600 dark:from-rose-400 dark:via-violet-400 dark:to-indigo-400 bg-clip-text text-transparent">
@@ -41,7 +41,7 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                             <p class="text-lg text-center text-white">
                                 {{ $t('home.description') }}
                             </p>
-                            <div class="flex items-center justify-start gap-4">
+                            <div class="flex items-center justify-start flex-col sm:flex-row gap-4">
                                 <button
                                     class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-colors duration-200"
                                     :aria-label="$t(aboutLink?.name)">

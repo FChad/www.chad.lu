@@ -2,7 +2,7 @@
     <nav class="bg-white dark:bg-slate-800 sticky top-0 z-50 min-h-14 flex items-center w-full">
         <div class="container max-w-7xl mx-auto w-full flex items-center justify-between px-4 py-2">
             <!-- Main Navigation Bar -->
-            <div class="flex items-center w-full gap-4">
+            <div class="flex items-center w-full gap-1 sm:gap-4">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <NuxtLink to="/" class="block cursor-pointer">
@@ -18,7 +18,7 @@
                 <div class="flex-1 flex items-center justify-center">
                     <!-- Desktop Navigation -->
                     <div class="hidden lg:flex items-center gap-8">
-                        <ul class="flex items-center gap-8">
+                        <ul class="flex items-center gap-6">
                             <li v-for="link in navLinks" :key="link.name" class="text-base">
                                 <NuxtLink :to="link.to"
                                     class="relative flex items-center gap-2 px-3 py-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
