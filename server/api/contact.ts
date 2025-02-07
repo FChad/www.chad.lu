@@ -1,4 +1,4 @@
-import { createTransport } from 'nodemailer'
+import { Resend } from 'resend'
 import { useRuntimeConfig } from '#imports'
 import * as yup from 'yup'
 
@@ -35,20 +35,18 @@ export default defineEventHandler(async (event) => {
         const { name, email, subject, message } = body;
         const config = useRuntimeConfig();
 
-        // Create transporter using runtime config
-        const transporter = createTransport({
-            host: config.mail.smtp.host,
-            port: config.mail.smtp.port,
-            auth: {
-                user: config.mail.smtp.user,
-                pass: config.mail.smtp.pass
-            }
-        });
+        // Initialize Resend with API key
+        const resend = new Resend(config.resend.apiKey);
 
-        await transporter.sendMail({
-            from: config.mail.smtp.user,
+        // In development/test mode, always send to the verified email
+        const toEmail = process.env.NODE_ENV === 'development' 
+            ? 'feiersteinchad@gmail.com'  // Your verified email for testing
+            : 'mail@chad.lu';             // Production email
+
+        await resend.emails.send({
+            from: 'Contact Form <onboarding@resend.dev>',
             replyTo: email,
-            to: 'mail@chad.lu',
+            to: toEmail,
             subject: `Contact Form: ${subject}`,
             text: `
                 Name: ${name}
