@@ -283,7 +283,7 @@ const onSubmit = handleSubmit(async (values) => {
                         </NuxtLink>
                     </div>
                     <div class="mt-10 flex justify-center">
-                        <img src="/contact/pexels-pixabay-533446.jpg" alt="Connect with us illustration"
+                        <img src="/contact/socials.webp" alt="Connect with us illustration"
                             class="w-full max-w-md h-auto rounded-xl opacity-95 dark:opacity-85 shadow-md" />
                     </div>
                 </div>

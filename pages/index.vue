@@ -62,7 +62,7 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                 </div>
             </div>
             <div class="absolute z-0 w-[110%] h-[110%] bg-slate-900 dark:text-slate-300">
-                <img src="/img/luxemburg.jpg" alt="Luxembourg city landscape" loading="eager"
+                <img src="/img/luxembourg.webp" alt="Luxembourg city landscape" loading="eager"
                     class="bg-cover w-full h-full brightness-125 dark:brightness-75 blur-[7px] opacity-90 object-cover z-0 transition-[filter] duration-300">
             </div>
         </div>
