@@ -94,7 +94,7 @@ const aboutSections = [
                     class="bg-white dark:bg-slate-800 rounded-xl px-6 py-4 shadow-sm border border-gray-100 dark:border-slate-700 lg:flex-shrink-0">
                     <div class="flex flex-col lg:flex-row gap-6 items-center">
                         <div class="relative">
-                            <img src="https://picsum.photos/96" alt="Profile Picture"
+                            <img src="/img/about/user-icon.png" alt="Profile Picture"
                                 class="w-24 h-24 rounded-full border-4 border-blue-500 dark:border-blue-400">
                         </div>
 
@@ -293,7 +293,7 @@ const aboutSections = [
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div class="group relative overflow-hidden rounded-lg">
-                                    <img src="/img/helicopter-scalled.png" alt="Helicopter Ride"
+                                    <img src="/img/about/helicopter-scalled.png" alt="Helicopter Ride"
                                         class="w-full h-64 object-cover transition transform group-hover:scale-105">
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
@@ -301,7 +301,7 @@ const aboutSections = [
                                     </div>
                                 </div>
                                 <div class="group relative overflow-hidden rounded-lg">
-                                    <img src="/img/fallschirmsprung-scalled.png" alt="Parachute Jump"
+                                    <img src="/img/about/fallschirmsprung-scalled.png" alt="Parachute Jump"
                                         class="w-full h-64 object-cover transition transform group-hover:scale-105">
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
