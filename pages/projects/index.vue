@@ -11,11 +11,11 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        title: "Example Project",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/img/no_image_available.jpg",
-        tags: ["HTML", "JavaScript", "CSS", "PHP", "SQL"],
-        link: "#"
+        title: "Portfolio App",
+        description: "This is my portfolio app built with Nuxt3, Nuxt i18n, Tailwind.",
+        image: "/img/projects/project-1-cover.png",
+        tags: ["Nuxt3", "Nuxt i18n", "Tailwind", "Iconify"],
+        link: "/projects/1"
     }
 ];
 </script>
