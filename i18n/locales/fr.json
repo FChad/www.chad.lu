@@ -249,6 +249,7 @@
     }
   },
   "common": {
+    "back": "Retour",
     "github": {
       "commits": "commits",
       "lastUpdated": "Dernière mise à jour"

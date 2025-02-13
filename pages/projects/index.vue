@@ -12,27 +12,6 @@ interface Project {
     link: string;
 }
 
-interface TagStyle {
-    tag: string;
-    classes: string;
-}
-
-const tagStyles: TagStyle[] = [
-    { tag: 'Nuxt3', classes: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100' },
-    { tag: 'TypeScript', classes: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100' },
-    { tag: 'Tailwind', classes: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-100' },
-    { tag: 'i18n', classes: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100' },
-    { tag: 'VeeValidate', classes: 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-100' },
-    { tag: 'Resend', classes: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100' },
-    { tag: 'Iconify', classes: 'bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-100' }
-];
-
-const getTagClasses = (tag: string): string => {
-    const baseClasses = 'px-3 py-1 rounded-full text-sm';
-    const tagStyle = tagStyles.find(style => style.tag === tag);
-    return tagStyle ? `${baseClasses} ${tagStyle.classes}` : baseClasses;
-};
-
 const projects: Project[] = [
     {
         id: 1,
@@ -74,7 +53,7 @@ const projects: Project[] = [
                                 {{ $t(project.description) }}
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span v-for="tag in project.tags" :key="tag" :class="getTagClasses(tag)">
+                                <span v-for="tag in project.tags" :key="tag" class="px-4 py-1 border border-neutral-500 rounded-full text-sm">
                                     {{ tag }}
                                 </span>
                             </div>

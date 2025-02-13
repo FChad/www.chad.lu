@@ -1,37 +1,26 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue';
 import { ref, onMounted } from 'vue';
+import { useLocalePath } from '#imports'
 
-interface TagStyle {
-    tag: string;
-    classes: string;
+interface Project {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+    link: string;
 }
 
-const tagStyles: TagStyle[] = [
-    { tag: 'Nuxt3', classes: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100' },
-    { tag: 'TypeScript', classes: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100' },
-    { tag: 'Tailwind', classes: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-100' },
-    { tag: 'i18n', classes: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100' },
-    { tag: 'VeeValidate', classes: 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-100' },
-    { tag: 'Resend', classes: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100' },
-    { tag: 'Iconify', classes: 'bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-100' }
-];
-
-const getTagClasses = (tag: string): string => {
-    const baseClasses = 'px-3 py-1 rounded-full text-sm';
-    const tagStyle = tagStyles.find(style => style.tag === tag);
-    return tagStyle ? `${baseClasses} ${tagStyle.classes}` : baseClasses;
-};
-
 const features = [
-    { id: 'frontendFramework', name: 'Frontend Framework', tech: 'Nuxt 3' },
-    { id: 'styling', name: 'Styling', tech: 'Tailwind CSS' },
-    { id: 'internationalization', name: 'Internationalization', tech: 'Nuxt i18n' },
-    { id: 'uiComponents', name: 'UI Components', tech: 'Custom Components' },
-    { id: 'developmentEnvironment', name: 'Development Environment', tech: 'VS Code + Cursor' },
-    { id: 'typeSafety', name: 'Type Safety', tech: 'TypeScript' },
-    { id: 'emailIntegration', name: 'Email Integration', tech: 'Resend' },
-    { id: 'formValidation', name: 'Form Validation', tech: 'VeeValidate + Yup' }
+    { id: 'frontendFramework', name: 'Frontend Framework', tech: 'Nuxt 3', icon: 'logos:nuxt-icon' },
+    { id: 'styling', name: 'Styling', tech: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+    { id: 'internationalization', name: 'Internationalization', tech: 'Nuxt i18n', icon: 'mdi:translate' },
+    { id: 'uiComponents', name: 'UI Components', tech: 'Custom Components', icon: 'mdi:puzzle' },
+    { id: 'developmentEnvironment', name: 'Development Environment', tech: 'VS Code + Cursor', icon: 'vscode-icons:file-type-vscode' },
+    { id: 'typeSafety', name: 'Type Safety', tech: 'TypeScript', icon: 'logos:typescript-icon' },
+    { id: 'emailIntegration', name: 'Email Integration', tech: 'Resend', icon: 'mdi:email' },
+    { id: 'formValidation', name: 'Form Validation', tech: 'VeeValidate + Yup', icon: 'mdi:form-textbox' }
 ];
 
 const keyFeatures = [
@@ -54,6 +43,8 @@ const githubStats = ref<GitHubStats>({
     totalCommits: 0,
     lastCommitDate: 'N/A'
 });
+const error = ref<string | null>(null);
+const isLoading = ref(true);
 
 // Fetch GitHub repository stats
 onMounted(async () => {
@@ -93,61 +84,86 @@ onMounted(async () => {
             totalCommits,
             lastCommitDate: lastCommitDate ?? 'N/A'
         };
-    } catch (error) {
-        console.error('Error fetching GitHub stats:', error);
+    } catch (err) {
+        console.error('Error fetching GitHub stats:', err);
+        error.value = 'Failed to load GitHub stats';
+        githubStats.value = {
+            totalCommits: 0,
+            lastCommitDate: 'N/A'
+        };
+    } finally {
+        isLoading.value = false;
     }
 });
+
+const localePath = useLocalePath();
 </script>
 
 <template>
     <div class="h-full bg-gray-50 dark:bg-slate-900 overflow-y-auto">
         <div class="max-w-7xl mx-auto p-4">
+            <!-- Back Button -->
+            <NuxtLink :to="localePath('/projects')"
+                class="mb-4 inline-flex items-center px-4 py-2 rounded-lg bg-white hover:bg-gray-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700">
+                <Icon icon="mdi:arrow-left" class="w-5 h-5 mr-2" />
+                {{ $t('common.back') }}
+            </NuxtLink>
+
             <!-- Header Card -->
             <div
-                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-6">
-                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{{ $t('projects.portfolio.title') }}
-                </h1>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    {{ $t('projects.portfolio.description') }}
-                </p>
-                <!-- GitHub Stats -->
-                <div class="flex gap-4 mb-4 text-sm text-gray-600 dark:text-gray-300">
-                    <div class="flex items-center gap-2">
-                        <Icon icon="mdi:source-commit" class="w-5 h-5" />
-                        {{ githubStats.totalCommits }} {{ $t('common.github.commits') }}
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <Icon icon="mdi:clock-outline" class="w-5 h-5" />
-                        {{ $t('common.github.lastUpdated') }}: {{ githubStats.lastCommitDate }}
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <span v-for="tag in ['Nuxt3', 'TypeScript', 'Tailwind', 'i18n', 'VeeValidate', 'Resend', 'Iconify']"
-                        :key="tag" :class="getTagClasses(tag)">
-                        {{ tag }}
-                    </span>
-                </div>
-            </div>
-
-            <!-- Project Cover Image -->
-            <div
-                class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 mb-6 overflow-hidden max-w-3xl mx-auto">
-                <div class="aspect-video w-full">
+                class="text-white bg-slate-800 rounded-xl shadow-sm border border-slate-700 mb-6 relative overflow-hidden">
+                <div class="absolute inset-0">
                     <img src="/img/projects/project-1-cover.png" alt="Portfolio App Cover"
-                        class="w-full h-full object-cover">
+                        class="w-full h-full object-cover opacity-70 blur-[6px] bg-slate-900">
                 </div>
-                <div class="p-4">
-                    <div class="flex justify-end gap-4">
-                        <a href="https://github.com/FChad/www.chad.lu" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600">
-                            <Icon icon="mdi:github" class="w-5 h-5 mr-2" />
-                            GitHub
-                        </a>
-                        <a href="https://www.chad.lu" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
-                            <Icon icon="mdi:open-in-new" class="w-5 h-5 mr-2" />
-                            Live Demo
-                        </a>
+                <div class="relative p-6 flex flex-col gap-5">
+                    <div class="flex flex-col gap-7">
+
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <h1 class="text-3xl font-bold text-white">
+                                {{ $t('projects.portfolio.title') }}
+                            </h1>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/FChad/www.chad.lu" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600">
+                                    <Icon icon="mdi:github" class="w-5 h-5 mr-2" />
+                                    GitHub
+                                </a>
+                                <a href="https://www.chad.lu" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                                    <Icon icon="mdi:open-in-new" class="w-5 h-5 mr-2" />
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <p>
+                            {{ $t('projects.portfolio.description') }}
+                        </p>
+                    </div>
+                    <!-- GitHub Stats -->
+                    <div class="flex items-center justify-between gap-4 flex-wrap">
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                v-for="tag in ['Nuxt3', 'TypeScript', 'Tailwind', 'i18n', 'VeeValidate', 'Resend', 'Iconify']"
+                                :key="tag" class="px-4 py-1 border border-neutral-500 rounded-full text-sm">
+                                {{ tag }}
+                            </span>
+                        </div>
+                        <div class="flex gap-4 text-xs text-gray-200 dark:text-gray-300 flex-wrap">
+                            <div v-if="error" class="text-red-400">
+                                {{ error }}
+                            </div>
+                            <template v-else-if="!isLoading">
+                                <div class="flex items-center gap-2">
+                                    <Icon icon="mdi:source-commit" class="w-5 h-5" />
+                                    {{ githubStats.totalCommits }} {{ $t('common.github.commits') }}
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <Icon icon="mdi:clock-outline" class="w-5 h-5" />
+                                    {{ $t('common.github.lastUpdated') }}: {{ githubStats.lastCommitDate }}
+                                </div>
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,9 +172,12 @@ onMounted(async () => {
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div v-for="feature in features" :key="feature.name"
                     class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                        {{ $t(`projects.portfolio.features.${feature.id}.name`) }}
-                    </h3>
+                    <div class="flex items-center gap-3 mb-2">
+                        <Icon :icon="feature.icon" class="w-6 h-6" />
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                            {{ $t(`projects.portfolio.features.${feature.id}.name`) }}
+                        </h3>
+                    </div>
                     <div class="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
                         {{ $t(`projects.portfolio.features.${feature.id}.tech`) }}
                     </div>

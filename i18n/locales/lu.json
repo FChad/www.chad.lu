@@ -249,6 +249,7 @@
     }
   },
   "common": {
+    "back": "Zeréck",
     "github": {
       "commits": "Commits",
       "lastUpdated": "Lescht Update"
