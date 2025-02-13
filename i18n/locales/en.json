@@ -131,7 +131,63 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Explore some of my recent work and personal projects"
+    "description": "Explore some of my recent work and personal projects",
+    "portfolio": {
+      "title": "My Portfolio Website",
+      "description": "A modern, responsive portfolio website showcasing my projects and skills. Built with the latest web technologies focusing on performance, accessibility, and user experience.",
+      "features": {
+        "frontendFramework": {
+          "name": "Frontend Framework",
+          "tech": "Nuxt 3",
+          "description": "Modern Vue.js framework with SSR capabilities, automatic routing, and enhanced performance optimization"
+        },
+        "styling": {
+          "name": "Styling",
+          "tech": "Tailwind CSS",
+          "description": "Utility-first CSS framework with custom configuration, dark mode support, and responsive design patterns"
+        },
+        "internationalization": {
+          "name": "Internationalization",
+          "tech": "Nuxt i18n",
+          "description": "Multi-language support (EN, FR, DE, LU) with dynamic locale switching and SEO optimization"
+        },
+        "uiComponents": {
+          "name": "UI Components",
+          "tech": "Custom Components",
+          "description": "Hand-crafted components with dark mode support, accessibility features, and smooth transitions"
+        },
+        "developmentEnvironment": {
+          "name": "Development Environment",
+          "tech": "VS Code + Cursor",
+          "description": "Modern IDE setup with AI-powered coding assistance and extensive extension support"
+        },
+        "typeSafety": {
+          "name": "Type Safety",
+          "tech": "TypeScript",
+          "description": "Strong type checking, enhanced code reliability, and better developer experience with IDE integration"
+        },
+        "emailIntegration": {
+          "name": "Email Integration",
+          "tech": "Resend",
+          "description": "Reliable email service integration for contact form submissions with secure API handling"
+        },
+        "formValidation": {
+          "name": "Form Validation",
+          "tech": "VeeValidate + Yup",
+          "description": "Robust form validation with schema-based validation rules and seamless Vue.js integration"
+        },
+        "keyFeatures": {
+          "title": "Key Features",
+          "responsiveDesign": "Responsive design that works seamlessly across all devices",
+          "darkMode": "Dark mode support for comfortable viewing in any lighting condition",
+          "multiLanguage": "Multi-language support with Nuxt i18n integration",
+          "modernUi": "Modern UI with smooth transitions and animations",
+          "typeSafe": "Type-safe development with TypeScript integration",
+          "secureContact": "Secure contact form with email integration",
+          "schemaValidation": "Schema-based form validation for enhanced user experience"
+        }
+      }
+    }
   },
   "contact": {
     "title": "Get in Touch",
@@ -192,4 +248,4 @@
       }
     }
   }
-} 
+}

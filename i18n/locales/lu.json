@@ -131,7 +131,63 @@
   },
   "projects": {
     "title": "Projeten",
-    "description": "Entdeckt e puer vu menge rezenten Aarbechten a perséinleche Projeten"
+    "description": "Entdeckt e puer vu menge rezenten Aarbechten a perséinleche Projeten",
+    "portfolio": {
+      "title": "Meng Portfolio Websäit",
+      "description": "Eng modern, responsiv Portfolio Websäit déi meng Projeten a Fäegkeete presentéiert. Entwéckelt mat den neiste Webtechnologien mat Fokus op Leeschtung, Zougängleechkeet a Benotzererliewnis.",
+      "features": {
+        "frontendFramework": {
+          "name": "Frontend Framework",
+          "tech": "Nuxt 3",
+          "description": "Modern Vue.js Framework mat SSR Fäegkeeten, automatescht Routing, a verbesserter Leeschtungsoptimisatioun"
+        },
+        "styling": {
+          "name": "Styling",
+          "tech": "Tailwind CSS",
+          "description": "Utility-first CSS Framework mat personaliséierter Konfiguratioun, Dark Mode Ënnerstëtzung, a responsive Design Muster"
+        },
+        "internationalization": {
+          "name": "Internationaliséierung",
+          "tech": "Nuxt i18n",
+          "description": "Multi-Sprooch Ënnerstëtzung (EN, FR, DE, LU) mat dynamescher Sproochëmstellung an SEO Optimiséierung"
+        },
+        "uiComponents": {
+          "name": "UI Komponenten",
+          "tech": "Eege Komponenten",
+          "description": "Handgemaachte Komponente mat Dark Mode Ënnerstëtzung, Accessibilitéits-Features, a fléissenden Transitiounen"
+        },
+        "developmentEnvironment": {
+          "name": "Entwécklungsëmfeld",
+          "tech": "VS Code + Cursor",
+          "description": "Modern IDE Setup mat KI-ënnerstëtzter Coding Assistance an extensive Erweiderungsënnerstëtzung"
+        },
+        "typeSafety": {
+          "name": "Typsécherheet",
+          "tech": "TypeScript",
+          "description": "Staark Typkontroll, verbessert Code Zouverlässegkeet, a besser Entwécklererliewnis mat IDE Integratioun"
+        },
+        "emailIntegration": {
+          "name": "Email Integratioun",
+          "tech": "Resend",
+          "description": "Zouverlässeg Email Service Integratioun fir Kontaktformular Submissiounen mat sécherer API Handhabung"
+        },
+        "formValidation": {
+          "name": "Formulär Validatioun",
+          "tech": "VeeValidate + Yup",
+          "description": "Robust Formulär Validatioun mat Schema-baséierte Validatiounsreegelen a nahtloser Vue.js Integratioun"
+        },
+        "keyFeatures": {
+          "title": "Haaptfunktionalitéiten",
+          "responsiveDesign": "Responsive Design dat nahtlos op allen Apparater funktionéiert",
+          "darkMode": "Dark Mode Ënnerstëtzung fir komfortabelt Liesen ënner all Beliichtungsbedingungen",
+          "multiLanguage": "Multi-Sprooch Ënnerstëtzung mat Nuxt i18n Integratioun",
+          "modernUi": "Modern UI mat fléissenden Transitiounen an Animatiounen",
+          "typeSafe": "Typsécher Entwécklung mat TypeScript Integratioun",
+          "secureContact": "Séchere Kontaktformulär mat Email Integratioun",
+          "schemaValidation": "Schema-baséiert Formulär Validatioun fir eng verbessert Benotzererliewnis"
+        }
+      }
+    }
   },
   "contact": {
     "title": "Kontaktéiert mech",
@@ -192,4 +248,4 @@
       }
     }
   }
-} 
+}

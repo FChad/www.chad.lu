@@ -131,7 +131,63 @@
   },
   "projects": {
     "title": "Projekte",
-    "description": "Entdecken Sie einige meiner aktuellen Arbeiten und persönlichen Projekte"
+    "description": "Entdecken Sie einige meiner aktuellen Arbeiten und persönlichen Projekte",
+    "portfolio": {
+      "title": "Meine Portfolio-Webseite",
+      "description": "Eine moderne, responsive Portfolio-Webseite, die meine Projekte und Fähigkeiten präsentiert. Entwickelt mit den neuesten Webtechnologien mit Fokus auf Leistung, Barrierefreiheit und Benutzererfahrung.",
+      "features": {
+        "frontendFramework": {
+          "name": "Frontend-Framework",
+          "tech": "Nuxt 3",
+          "description": "Modernes Vue.js-Framework mit SSR-Funktionen, automatischem Routing und verbesserter Leistungsoptimierung"
+        },
+        "styling": {
+          "name": "Styling",
+          "tech": "Tailwind CSS",
+          "description": "Utility-First-CSS-Framework mit individueller Konfiguration, Dark-Mode-Unterstützung und responsiven Design-Mustern"
+        },
+        "internationalization": {
+          "name": "Internationalisierung",
+          "tech": "Nuxt i18n",
+          "description": "Mehrsprachenunterstützung (EN, FR, DE, LU) mit dynamischem Sprachwechsel und SEO-Optimierung"
+        },
+        "uiComponents": {
+          "name": "UI-Komponenten",
+          "tech": "Eigene Komponenten",
+          "description": "Handgefertigte Komponenten mit Dark-Mode-Unterstützung, Barrierefreiheitsfunktionen und sanften Übergängen"
+        },
+        "developmentEnvironment": {
+          "name": "Entwicklungsumgebung",
+          "tech": "VS Code + Cursor",
+          "description": "Moderne IDE-Einrichtung mit KI-gestützter Coding-Unterstützung und umfangreicher Erweiterungsunterstützung"
+        },
+        "typeSafety": {
+          "name": "Typsicherheit",
+          "tech": "TypeScript",
+          "description": "Strenge Typprüfung, verbesserte Codezuverlässigkeit und bessere Entwicklererfahrung mit IDE-Integration"
+        },
+        "emailIntegration": {
+          "name": "E-Mail-Integration",
+          "tech": "Resend",
+          "description": "Zuverlässige E-Mail-Service-Integration für Kontaktformular-Übermittlungen mit sicherer API-Handhabung"
+        },
+        "formValidation": {
+          "name": "Formularvalidierung",
+          "tech": "VeeValidate + Yup",
+          "description": "Robuste Formularvalidierung mit schemabasierten Validierungsregeln und nahtloser Vue.js-Integration"
+        },
+        "keyFeatures": {
+          "title": "Hauptmerkmale",
+          "responsiveDesign": "Responsives Design, das nahtlos auf allen Geräten funktioniert",
+          "darkMode": "Dark-Mode-Unterstützung für angenehmes Betrachten bei jeder Beleuchtung",
+          "multiLanguage": "Mehrsprachenunterstützung mit Nuxt i18n-Integration",
+          "modernUi": "Moderne Benutzeroberfläche mit sanften Übergängen und Animationen",
+          "typeSafe": "Typsichere Entwicklung mit TypeScript-Integration",
+          "secureContact": "Sicheres Kontaktformular mit E-Mail-Integration",
+          "schemaValidation": "Schemabasierte Formularvalidierung für verbesserte Benutzererfahrung"
+        }
+      }
+    }
   },
   "contact": {
     "title": "Kontakt aufnehmen",
@@ -192,4 +248,4 @@
       }
     }
   }
-} 
+}

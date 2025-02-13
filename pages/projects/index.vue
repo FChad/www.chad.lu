@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
+
 interface Project {
     id: number;
     title: string;
@@ -8,14 +12,35 @@ interface Project {
     link: string;
 }
 
+interface TagStyle {
+    tag: string;
+    classes: string;
+}
+
+const tagStyles: TagStyle[] = [
+    { tag: 'Nuxt3', classes: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100' },
+    { tag: 'TypeScript', classes: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100' },
+    { tag: 'Tailwind', classes: 'bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-100' },
+    { tag: 'i18n', classes: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100' },
+    { tag: 'VeeValidate', classes: 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-100' },
+    { tag: 'Resend', classes: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-100' },
+    { tag: 'Iconify', classes: 'bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-100' }
+];
+
+const getTagClasses = (tag: string): string => {
+    const baseClasses = 'px-3 py-1 rounded-full text-sm';
+    const tagStyle = tagStyles.find(style => style.tag === tag);
+    return tagStyle ? `${baseClasses} ${tagStyle.classes}` : baseClasses;
+};
+
 const projects: Project[] = [
     {
         id: 1,
-        title: "Portfolio App",
-        description: "This is my portfolio app built with Nuxt3, Nuxt i18n, Tailwind.",
+        title: "projects.portfolio.title",
+        description: "projects.portfolio.description",
         image: "/img/projects/project-1-cover.png",
-        tags: ["Nuxt3", "Nuxt i18n", "Tailwind", "Iconify"],
-        link: "/projects/1"
+        tags: ["Nuxt3", "TypeScript", "Tailwind", "i18n", "VeeValidate", "Resend", "Iconify"],
+        link: localePath('/projects/my-portfolio-website')
     }
 ];
 </script>
@@ -43,14 +68,13 @@ const projects: Project[] = [
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                                {{ project.title }}
+                                {{ $t(project.title) }}
                             </h3>
                             <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                {{ project.description }}
+                                {{ $t(project.description) }}
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span v-for="tag in project.tags" :key="tag"
-                                    class="px-3 py-1 bg-gray-50 dark:bg-slate-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm">
+                                <span v-for="tag in project.tags" :key="tag" :class="getTagClasses(tag)">
                                     {{ tag }}
                                 </span>
                             </div>
