@@ -247,5 +247,11 @@
         "max": "De Message däerf maximal 1000 Zeechen hunn"
       }
     }
+  },
+  "common": {
+    "github": {
+      "commits": "Commits",
+      "lastUpdated": "Lescht Update"
+    }
   }
 }

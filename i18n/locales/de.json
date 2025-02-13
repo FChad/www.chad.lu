@@ -247,5 +247,11 @@
         "max": "Die Nachricht darf maximal 1000 Zeichen lang sein"
       }
     }
+  },
+  "common": {
+    "github": {
+      "commits": "Commits",
+      "lastUpdated": "Letztes Update"
+    }
   }
 }

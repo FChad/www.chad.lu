@@ -247,5 +247,11 @@
         "max": "Message cannot exceed 1000 characters"
       }
     }
+  },
+  "common": {
+    "github": {
+      "commits": "commits",
+      "lastUpdated": "Last updated"
+    }
   }
 }

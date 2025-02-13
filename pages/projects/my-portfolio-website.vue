@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue';
+import { ref, onMounted } from 'vue';
 
 interface TagStyle {
     tag: string;
@@ -42,6 +43,60 @@ const keyFeatures = [
     'secureContact',
     'schemaValidation'
 ];
+
+interface GitHubStats {
+    totalCommits: number;
+    lastCommitDate: string;
+}
+
+// Initialize with default values
+const githubStats = ref<GitHubStats>({
+    totalCommits: 0,
+    lastCommitDate: 'N/A'
+});
+
+// Fetch GitHub repository stats
+onMounted(async () => {
+    try {
+        let page = 1;
+        let totalCommits = 0;
+        let hasNextPage = true;
+        let lastCommitDate;
+
+        // Fetch all commits across multiple pages
+        while (hasNextPage) {
+            const response = await fetch(`https://api.github.com/repos/FChad/www.chad.lu/commits?per_page=100&page=${page}`);
+            const commits = await response.json();
+
+            if (commits.length === 0) {
+                hasNextPage = false;
+            } else {
+                totalCommits += commits.length;
+
+                // Store the date of the first commit on the first page
+                if (page === 1) {
+                    const date = new Date(commits[0].commit.author.date);
+                    lastCommitDate = new Intl.DateTimeFormat('de-DE', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    }).format(date);
+                }
+
+                page++;
+            }
+        }
+
+        githubStats.value = {
+            totalCommits,
+            lastCommitDate: lastCommitDate ?? 'N/A'
+        };
+    } catch (error) {
+        console.error('Error fetching GitHub stats:', error);
+    }
+});
 </script>
 
 <template>
@@ -55,6 +110,17 @@ const keyFeatures = [
                 <p class="text-gray-600 dark:text-gray-300 mb-4">
                     {{ $t('projects.portfolio.description') }}
                 </p>
+                <!-- GitHub Stats -->
+                <div class="flex gap-4 mb-4 text-sm text-gray-600 dark:text-gray-300">
+                    <div class="flex items-center gap-2">
+                        <Icon icon="mdi:source-commit" class="w-5 h-5" />
+                        {{ githubStats.totalCommits }} {{ $t('common.github.commits') }}
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <Icon icon="mdi:clock-outline" class="w-5 h-5" />
+                        {{ $t('common.github.lastUpdated') }}: {{ githubStats.lastCommitDate }}
+                    </div>
+                </div>
                 <div class="flex flex-wrap gap-2">
                     <span v-for="tag in ['Nuxt3', 'TypeScript', 'Tailwind', 'i18n', 'VeeValidate', 'Resend', 'Iconify']"
                         :key="tag" :class="getTagClasses(tag)">
@@ -70,17 +136,19 @@ const keyFeatures = [
                     <img src="/img/projects/project-1-cover.png" alt="Portfolio App Cover"
                         class="w-full h-full object-cover">
                 </div>
-                <div class="p-4 flex justify-end gap-4">
-                    <a href="https://github.com/FChad/www.chad.lu" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600">
-                        <Icon icon="mdi:github" class="w-5 h-5 mr-2" />
-                        GitHub
-                    </a>
-                    <a href="https://www.chad.lu" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
-                        <Icon icon="mdi:open-in-new" class="w-5 h-5 mr-2" />
-                        Live Demo
-                    </a>
+                <div class="p-4">
+                    <div class="flex justify-end gap-4">
+                        <a href="https://github.com/FChad/www.chad.lu" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600">
+                            <Icon icon="mdi:github" class="w-5 h-5 mr-2" />
+                            GitHub
+                        </a>
+                        <a href="https://www.chad.lu" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">
+                            <Icon icon="mdi:open-in-new" class="w-5 h-5 mr-2" />
+                            Live Demo
+                        </a>
+                    </div>
                 </div>
             </div>
 
