@@ -24,5 +24,11 @@ export default defineNuxtConfig({
       token: process.env.GITHUB_TOKEN,
       token2: process.env.GITHUB_TOKEN2
     }
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
   }
 })

@@ -2,11 +2,13 @@
 import { toTypedSchema } from "@vee-validate/yup";
 import { useField, useForm } from "vee-validate";
 import * as yup from "yup";
-import { useI18n } from "vue-i18n";
+import { useLocalePath } from '#imports'
+import { useSeo } from '#imports'
 
 const { t } = useI18n();
 
 const { locale } = useI18n();
+const localePath = useLocalePath();
 
 // Define the validation schema with i18n
 const validationSchema = toTypedSchema(yup.object({
@@ -104,6 +106,13 @@ const onSubmit = handleSubmit(async (values) => {
         isSubmitting.value = false;
     }
 });
+
+// SEO
+useSeo({
+    title: 'seo.contact.title',
+    description: 'seo.contact.description',
+    path: localePath('/contact'),
+})
 </script>
 
 <template>

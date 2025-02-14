@@ -1,7 +1,16 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue';
 import { useLocalePath } from '#imports'
-import { useAsyncData } from '#imports'
+import { useSeo } from '#imports'
+
+const localePath = useLocalePath()
+
+// SEO
+useSeo({
+    title: 'projects.portfolio.title',
+    description: 'projects.portfolio.description',
+    path: localePath('/projects/my-portfolio-website')
+})
 
 interface Project {
     id: number;
@@ -46,8 +55,6 @@ const { data: githubStats, error } = await useFetch<GitHubStats>('/api/github/ww
         return null
     }
 })
-
-const localePath = useLocalePath();
 </script>
 
 <template>

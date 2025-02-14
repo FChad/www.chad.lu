@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useLocalePath, useI18n } from '#imports'
+import { useSeo } from '#imports'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
@@ -82,6 +83,14 @@ const aboutSections = [
         icon: 'mdi:heart'
     }
 ];
+
+// SEO
+useSeo({
+    title: 'seo.about.title',
+    description: 'seo.about.description',
+    path: localePath('/about')
+})
+
 </script>
 
 <template>

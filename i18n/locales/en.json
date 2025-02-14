@@ -255,5 +255,27 @@
       "lastUpdated": "Last updated"
     },
     "githubStatsUnavailable": "GitHub stats unavailable"
+  },
+  "seo": {
+    "home": {
+      "title": "Feierstein Chad - Portfolio",
+      "description": "Explore my portfolio showcasing web development projects, skills, and professional experience in full stack development and cloud computing."
+    },
+    "about": {
+      "title": "Feierstein Chad - About Me",
+      "description": "Learn more about my professional journey, skills, and experiences in IT and cloud computing. Discover my background, certifications, and personal interests."
+    },
+    "contact": {
+      "title": "Feierstein Chad - Contact",
+      "description": "Get in touch with me for inquiries, collaborations, or questions about my work in web development and cloud computing. I'll respond within 24 hours."
+    },
+    "projects": {
+      "title": "Feierstein Chad - Projects",
+      "description": "Explore my portfolio of web development and cloud computing projects. See my technical skills in action through real-world applications."
+    },
+    "skills": {
+      "title": "Feierstein Chad - Skills",
+      "description": "Discover my technical skills in web development, cloud computing, and IT infrastructure. From programming languages to certifications and practical experience."
+    }
   }
 }

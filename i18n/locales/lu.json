@@ -255,5 +255,27 @@
       "lastUpdated": "Lescht Update"
     },
     "githubStatsUnavailable": "GitHub-Statistiken net verfügbar"
+  },
+  "seo": {
+    "home": {
+      "title": "Feierstein Chad - Portfolio",
+      "description": "Entdeckt mäi Portfolio mat Webentwécklungsprojeten, Fäegkeeten a Beruffserfarung am Full Stack Entwécklung a Cloud Computing."
+    },
+    "about": {
+      "title": "Feierstein Chad - Iwwer Mech",
+      "description": "Léiert méi iwwer mäi beruffleche Wee, meng Fäegkeeten an Erfarungen an der IT a Cloud Computing. Entdeckt mäin Hannergrond, Zertifizéierungen a perséinlech Interessen."
+    },
+    "contact": {
+      "title": "Feierstein Chad - Kontakt",
+      "description": "Kontaktéiert mech fir Ufroen, Zesummenaarbecht oder Froen zu menger Aarbecht an der Webentwécklung a Cloud Computing. Ech äntweren bannent 24 Stonnen."
+    },
+    "projects": {
+      "title": "Feierstein Chad - Projeten",
+      "description": "Entdeckt mäi Portfolio vu Webentwécklungs- a Cloud-Computing-Projeten. Gesitt meng technesch Fäegkeeten a prakteschen Uwendungen."
+    },
+    "skills": {
+      "title": "Feierstein Chad - Fäegkeeten",
+      "description": "Entdeckt meng technesch Fäegkeeten an der Webentwécklung, Cloud Computing an IT-Infrastruktur. Vu Programméiersprooche bis zu Zertifizéierungen a praktesch Erfarung."
+    }
   }
 }

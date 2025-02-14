@@ -1,7 +1,15 @@
 <script lang="ts" setup>
 import { useLocalePath } from '#imports'
+import { useSeo } from '#imports'
 
 const localePath = useLocalePath()
+
+// SEO
+useSeo({
+    title: 'seo.projects.title',
+    description: 'seo.projects.description',
+    path: localePath('/projects')
+})
 
 interface Project {
     id: number;

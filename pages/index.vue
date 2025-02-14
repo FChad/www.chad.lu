@@ -2,6 +2,7 @@
 import { useLocalePath } from '#imports'
 import { useNavigation } from '~/composables/useNavigation'
 import { computed } from 'vue'
+import { useSeo } from '~/composables/useSeo'
 
 const localePath = useLocalePath()
 const { navLinks, getLink } = useNavigation()
@@ -16,6 +17,13 @@ interface NavLink {
 // Example of getting specific links
 const aboutLink = computed<NavLink | undefined>(() => getLink('nav.about'))
 const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects'))
+
+// SEO
+useSeo({
+    title: 'seo.home.title',
+    description: 'seo.home.description',
+    path: localePath('/'),
+})
 </script>
 
 <template>
@@ -46,7 +54,7 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                                     class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-colors duration-200"
                                     :aria-label="aboutLink?.name ? $t(aboutLink.name) : ''">
                                     <NuxtLink class="flex items-center gap-1" :to="aboutLink?.to ?? '/'">
-                                        <Icon :name="aboutLink?.icon ?? ''" class="text-xl" /> 
+                                        <Icon :name="aboutLink?.icon ?? ''" class="text-xl" />
                                         {{ aboutLink?.name ? $t(aboutLink.name) : '' }}
                                     </NuxtLink>
                                 </button>
@@ -54,7 +62,7 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                                     class="border border-white hover:bg-white hover:text-slate-900 text-white px-6 py-2 rounded-full transition-colors duration-200"
                                     :aria-label="projectsLink?.name ? $t(projectsLink.name) : ''">
                                     <NuxtLink class="flex items-center gap-1" :to="projectsLink?.to ?? '/'">
-                                        <Icon :name="projectsLink?.icon ?? ''" class="text-xl" /> 
+                                        <Icon :name="projectsLink?.icon ?? ''" class="text-xl" />
                                         {{ projectsLink?.name ? $t(projectsLink.name) : '' }}
                                     </NuxtLink>
                                 </button>

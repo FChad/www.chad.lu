@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+import { useLocalePath } from '#imports'
+import { useSeo } from '#imports'
+
+const localePath = useLocalePath()
+
 const certifications = {
     title: 'certifications.title',
     icon: 'mdi:certificate',
@@ -97,6 +102,13 @@ const skills = [
         ]
     }
 ];
+
+// SEO
+useSeo({
+    title: 'seo.skills.title',
+    description: 'seo.skills.description',
+    path: localePath('/skills')
+}) 
 </script>
 
 <template>
