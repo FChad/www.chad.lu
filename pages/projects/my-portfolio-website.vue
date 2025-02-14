@@ -17,7 +17,7 @@ const features = [
     { id: 'styling', name: 'Styling', tech: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
     { id: 'internationalization', name: 'Internationalization', tech: 'Nuxt i18n', icon: 'mdi:translate' },
     { id: 'uiComponents', name: 'UI Components', tech: 'Custom Components', icon: 'mdi:puzzle' },
-    { id: 'developmentEnvironment', name: 'Development Environment', tech: 'VS Code + Cursor', icon: 'vscode-icons:file-type-vscode' },
+    { id: 'developmentEnvironment', name: 'Development Environment', tech: 'VS Code + Cursor', icon: 'logos:visual-studio-code' },
     { id: 'typeSafety', name: 'Type Safety', tech: 'TypeScript', icon: 'logos:typescript-icon' },
     { id: 'emailIntegration', name: 'Email Integration', tech: 'Resend', icon: 'mdi:email' },
     { id: 'formValidation', name: 'Form Validation', tech: 'VeeValidate + Yup', icon: 'mdi:form-textbox' }

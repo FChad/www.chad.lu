@@ -34,7 +34,7 @@ onMounted(() => {
                     <div class="modal-header">
                         <slot name="header">
                             <h2 v-if="title" class="font-semibold text-lg">{{ title }}</h2>
-                            <BaseButton variant="secondary" size="sm" shape="square" icon="material-symbols:close-rounded"
+                            <BaseButton variant="secondary" size="sm" shape="square" icon="mdi:window-close"
                                 @click="handleModal" aria-label="Close modal" />
                         </slot>
                     </div>

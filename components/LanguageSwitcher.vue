@@ -121,7 +121,7 @@ onUnmounted(() => {
             class="flex items-center h-8 gap-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent p-1 px-2 w-fit justify-center"
             @click="isOpen = !isOpen">
             <Icon :name="`circle-flags:${locale}`" class="w-5 h-5 flex-shrink-0" />
-            <Icon name="heroicons:chevron-down-20-solid" class="w-5 h-5 text-slate-400 transition-transform"
+            <Icon name="mdi:chevron-down" class="w-5 h-5 text-slate-400 transition-transform"
                 :class="{ 'rotate-180': isOpen }" />
         </button>
 

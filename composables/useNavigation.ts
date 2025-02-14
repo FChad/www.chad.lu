@@ -12,11 +12,11 @@ export const useNavigation = () => {
     const localePath = useLocalePath()
 
     const navLinks = computed((): NavLink[] => [
-        { name: 'nav.home', to: localePath('/'), icon: 'material-symbols-light:family-home' },
-        { name: 'nav.about', to: localePath('/about'), icon: 'material-symbols-light:person' },
-        { name: 'nav.skills', to: localePath('/skills'), icon: 'material-symbols-light:book-2' },
-        { name: 'nav.projects', to: localePath('/projects'), icon: 'material-symbols-light:folder' },
-        { name: 'nav.contact', to: localePath('/contact'), icon: 'material-symbols-light:mail' }
+        { name: 'nav.home', to: localePath('/'), icon: 'mdi:home' },
+        { name: 'nav.about', to: localePath('/about'), icon: 'mdi:person' },
+        { name: 'nav.skills', to: localePath('/skills'), icon: 'mdi:book-education' },
+        { name: 'nav.projects', to: localePath('/projects'), icon: 'mdi:folder' },
+        { name: 'nav.contact', to: localePath('/contact'), icon: 'mdi:mail' }
     ])
 
     // Helper function to get a specific link by name

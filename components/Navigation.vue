@@ -44,7 +44,7 @@
                         </ClientOnly>
                     </div>
                     <!-- Mobile Menu Button -->
-                    <BaseButton variant="filled" size="sm" shape="square" type="button" icon="material-symbols:menu"
+                    <BaseButton variant="filled" size="sm" shape="square" type="button" icon="mdi:menu"
                         :disabled="false"
                         class="lg:hidden bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-500 dark:text-slate-300"
                         @click="handleModal">
@@ -66,7 +66,7 @@
                                 <Icon :name="link.icon" size="24" class="text-slate-700 dark:text-slate-200" />
                             </div>
                             <span class="text-base font-medium">{{ $t(link.name) }}</span>
-                            <Icon name="material-symbols:chevron-right" size="24"
+                            <Icon name="mdi:chevron-right" size="24"
                                 class="text-slate-400 transition-transform group-hover:translate-x-1 justify-self-end"
                                 :class="{ 'text-blue-500': $route.path === localePath(link.to) }" />
                         </NuxtLink>

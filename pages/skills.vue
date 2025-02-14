@@ -127,7 +127,7 @@ const skills = [
                             <a :href="cert.link" target="_blank"
                                 class="inline-flex items-center text-sm text-blue-400 dark:text-blue-300 hover:text-blue-600 dark:hover:text-blue-400">
                                 {{ $t('skills.moreInformation') }}
-                                <Icon name="heroicons:arrow-right" class="ml-1 h-4 w-4" />
+                                <Icon name="mdi:arrow-right" class="ml-1 h-4 w-4" />
                             </a>
                         </div>
                     </div>
