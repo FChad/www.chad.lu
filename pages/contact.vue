@@ -37,11 +37,11 @@ const { handleSubmit, values, resetForm } = useForm({
     validationSchema
 });
 
-// Define fields
-const { value: name, errorMessage: nameError } = useField('name');
-const { value: email, errorMessage: emailError } = useField('email');
-const { value: subject, errorMessage: subjectError } = useField('subject');
-const { value: message, errorMessage: messageError } = useField('message');
+// Define fields with explicit string type
+const { value: name, errorMessage: nameError } = useField<string>('name');
+const { value: email, errorMessage: emailError } = useField<string>('email');
+const { value: subject, errorMessage: subjectError } = useField<string>('subject');
+const { value: message, errorMessage: messageError } = useField<string>('message');
 
 // Add status handling
 const status = ref('');
