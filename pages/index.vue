@@ -44,16 +44,18 @@ const projectsLink = computed<NavLink | undefined>(() => getLink('nav.projects')
                             <div class="flex items-center justify-start flex-col sm:flex-row gap-4">
                                 <button
                                     class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-colors duration-200"
-                                    :aria-label="$t(aboutLink?.name)">
-                                    <NuxtLink class="flex items-center gap-1" :to="aboutLink?.to">
-                                        <Icon :name="aboutLink?.icon" class="text-xl" /> {{ $t(aboutLink?.name) }}
+                                    :aria-label="aboutLink?.name ? $t(aboutLink.name) : ''">
+                                    <NuxtLink class="flex items-center gap-1" :to="aboutLink?.to ?? '/'">
+                                        <Icon :name="aboutLink?.icon ?? ''" class="text-xl" /> 
+                                        {{ aboutLink?.name ? $t(aboutLink.name) : '' }}
                                     </NuxtLink>
                                 </button>
                                 <button
                                     class="border border-white hover:bg-white hover:text-slate-900 text-white px-6 py-2 rounded-full transition-colors duration-200"
-                                    :aria-label="$t(projectsLink?.name)">
-                                    <NuxtLink class="flex items-center gap-1" :to="projectsLink?.to">
-                                        <Icon :name="projectsLink?.icon" class="text-xl" /> {{ $t(projectsLink?.name) }}
+                                    :aria-label="projectsLink?.name ? $t(projectsLink.name) : ''">
+                                    <NuxtLink class="flex items-center gap-1" :to="projectsLink?.to ?? '/'">
+                                        <Icon :name="projectsLink?.icon ?? ''" class="text-xl" /> 
+                                        {{ projectsLink?.name ? $t(projectsLink.name) : '' }}
                                     </NuxtLink>
                                 </button>
                             </div>
