@@ -94,7 +94,6 @@ const handleModal = () => {
 
 const isActiveRoute = (path) => {
     const localizedPath = localePath(path)
-    console.log(localizedPath);
     // Exact match for home page
     if (localizedPath === '/' || localizedPath === `/${locale.value}`) {
         return route.path === localizedPath || route.path === `/${locale.value}`
