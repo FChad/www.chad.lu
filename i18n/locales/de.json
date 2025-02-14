@@ -253,6 +253,7 @@
     "github": {
       "commits": "Commits",
       "lastUpdated": "Letztes Update"
-    }
+    },
+    "githubStatsUnavailable": "GitHub-Statistiken nicht verfügbar"
   }
 }

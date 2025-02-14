@@ -2,6 +2,8 @@
 import { Icon } from '@iconify/vue';
 import { ref, onMounted } from 'vue';
 import { useLocalePath } from '#imports'
+import { useAsyncData } from '#imports'
+import { loadIcon } from '@iconify/vue';
 
 interface Project {
     id: number;
@@ -38,65 +40,63 @@ interface GitHubStats {
     lastCommitDate: string;
 }
 
-// Initialize with default values
-const githubStats = ref<GitHubStats>({
-    totalCommits: 0,
-    lastCommitDate: 'N/A'
-});
-const error = ref<string | null>(null);
-const isLoading = ref(true);
-
-// Fetch GitHub repository stats
-onMounted(async () => {
-    try {
-        let page = 1;
-        let totalCommits = 0;
-        let hasNextPage = true;
-        let lastCommitDate;
-
-        // Fetch all commits across multiple pages
-        while (hasNextPage) {
-            const response = await fetch(`https://api.github.com/repos/FChad/www.chad.lu/commits?per_page=100&page=${page}`);
-            const commits = await response.json();
-
-            if (commits.length === 0) {
-                hasNextPage = false;
-            } else {
-                totalCommits += commits.length;
-
-                // Store the date of the first commit on the first page
-                if (page === 1) {
-                    const date = new Date(commits[0].commit.author.date);
-                    lastCommitDate = new Intl.DateTimeFormat('de-DE', {
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                    }).format(date);
-                }
-
-                page++;
+const { data: githubStats, error } = await useAsyncData<GitHubStats | null>(
+    'github-stats',
+    async () => {
+        try {
+            const response = await fetch('http://localhost:3000/api/github/www.chad.lu')
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`)
             }
+            const data = await response.json()
+            return {
+                totalCommits: data.totalCommits,
+                lastCommitDate: data.lastCommitDate
+            }
+        } catch (err) {
+            console.error('Error fetching GitHub stats:', err)
+            return null
         }
-
-        githubStats.value = {
-            totalCommits,
-            lastCommitDate: lastCommitDate ?? 'N/A'
-        };
-    } catch (err) {
-        console.error('Error fetching GitHub stats:', err);
-        error.value = 'Failed to load GitHub stats';
-        githubStats.value = {
-            totalCommits: 0,
-            lastCommitDate: 'N/A'
-        };
-    } finally {
-        isLoading.value = false;
+    },
+    {
+        server: true,
+        watch: []
     }
-});
+)
 
 const localePath = useLocalePath();
+
+// Remove the onMounted hook and replace with server-side icon loading
+await useAsyncData('preloaded-icons', async () => {
+    const iconList = [
+        'mdi:arrow-left',
+        'mdi:github',
+        'mdi:open-in-new',
+        'mdi:source-commit',
+        'mdi:clock-outline',
+        'mdi:alert',
+        'logos:nuxt-icon',
+        'logos:tailwindcss-icon',
+        'mdi:translate',
+        'mdi:puzzle',
+        'vscode-icons:file-type-vscode',
+        'logos:typescript-icon',
+        'mdi:email',
+        'mdi:form-textbox'
+    ];
+
+    try {
+        await Promise.all(iconList.map(icon => loadIcon(icon)));
+        return true;
+    } catch (error) {
+        console.error('Failed to load icons:', error);
+        return false;
+    }
+}, {
+    server: true,
+    lazy: false, // This ensures the data is loaded before rendering
+    immediate: true
+});
 </script>
 
 <template>
@@ -150,17 +150,18 @@ const localePath = useLocalePath();
                             </span>
                         </div>
                         <div class="flex gap-4 text-xs text-gray-200 dark:text-gray-300 flex-wrap">
-                            <div v-if="error" class="text-red-400">
-                                {{ error }}
+                            <div v-if="error || !githubStats" class="flex items-center gap-2 text-yellow-400">
+                                <Icon icon="mdi:alert" class="w-5 h-5" />
+                                {{ $t('common.githubStatsUnavailable') }}
                             </div>
-                            <template v-else-if="!isLoading">
+                            <template v-else>
                                 <div class="flex items-center gap-2">
                                     <Icon icon="mdi:source-commit" class="w-5 h-5" />
-                                    {{ githubStats.totalCommits }} {{ $t('common.github.commits') }}
+                                    {{ githubStats?.totalCommits }} {{ $t('common.github.commits') }}
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <Icon icon="mdi:clock-outline" class="w-5 h-5" />
-                                    {{ $t('common.github.lastUpdated') }}: {{ githubStats.lastCommitDate }}
+                                    {{ $t('common.github.lastUpdated') }}: {{ githubStats?.lastCommitDate }}
                                 </div>
                             </template>
                         </div>
