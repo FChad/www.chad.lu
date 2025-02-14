@@ -38,22 +38,14 @@ interface GitHubStats {
     lastCommitDate: string;
 }
 
-const { data: githubStats, error } = await useAsyncData<GitHubStats | null>(
-    'github-stats',
-    async () => {
-        try {
-            const response = await $fetch<GitHubStats>('/api/github/www.chad.lu')
-            return response
-        } catch (err) {
-            console.error('Error fetching GitHub stats:', err)
-            return null
-        }
-    },
-    {
-        server: true,
-        watch: []
+const { data: githubStats, error } = await useFetch<GitHubStats>('/api/github/www.chad.lu', {
+    server: true,
+    watch: false,
+    onResponseError: (error) => {
+        console.error('Error fetching GitHub stats:', error)
+        return null
     }
-)
+})
 
 const localePath = useLocalePath();
 </script>
