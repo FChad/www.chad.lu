@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue';
-import { ref, onMounted } from 'vue';
 import { useLocalePath } from '#imports'
 import { useAsyncData } from '#imports'
-import { loadIcon } from '@iconify/vue';
 
 interface Project {
     id: number;
@@ -65,38 +63,6 @@ const { data: githubStats, error } = await useAsyncData<GitHubStats | null>(
 )
 
 const localePath = useLocalePath();
-
-// Remove the onMounted hook and replace with server-side icon loading
-await useAsyncData('preloaded-icons', async () => {
-    const iconList = [
-        'mdi:arrow-left',
-        'mdi:github',
-        'mdi:open-in-new',
-        'mdi:source-commit',
-        'mdi:clock-outline',
-        'mdi:alert',
-        'logos:nuxt-icon',
-        'logos:tailwindcss-icon',
-        'mdi:translate',
-        'mdi:puzzle',
-        'vscode-icons:file-type-vscode',
-        'logos:typescript-icon',
-        'mdi:email',
-        'mdi:form-textbox'
-    ];
-
-    try {
-        await Promise.all(iconList.map(icon => loadIcon(icon)));
-        return true;
-    } catch (error) {
-        console.error('Failed to load icons:', error);
-        return false;
-    }
-}, {
-    server: true,
-    lazy: false, // This ensures the data is loaded before rendering
-    immediate: true
-});
 </script>
 
 <template>
