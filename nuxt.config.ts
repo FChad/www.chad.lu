@@ -21,7 +21,8 @@ export default defineNuxtConfig({
       toEmail: process.env.RESEND_TO_EMAIL
     },
     github: {
-      token: process.env.GITHUB_TOKEN
+      token: process.env.GITHUB_TOKEN,
+      token2: process.env.GITHUB_TOKEN2
     }
   }
 })

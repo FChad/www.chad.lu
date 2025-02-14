@@ -28,40 +28,43 @@ export default defineEventHandler(async (event) => {
         let hasNextPage = true
         let lastCommitDate
 
-        while (hasNextPage) {
-            const response = await $fetch<GitHubStats[]>(
-                `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${PER_PAGE}&page=${page}`,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${config.github.token}`,
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                }
-            )
+        // while (hasNextPage) {
+        //     const response = await $fetch<GitHubStats[]>(
+        //         `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${PER_PAGE}&page=${page}`,
+        //         {
+        //             headers: {
+        //                 'Authorization': `Bearer ${config.github.token}`,
+        //                 'Accept': 'application/vnd.github.v3+json'
+        //             }
+        //         }
+        //     )
 
-            if (response.length === 0) {
-                hasNextPage = false
-            } else {
-                totalCommits += response.length
+        //     if (response.length === 0) {
+        //         hasNextPage = false
+        //     } else {
+        //         totalCommits += response.length
 
-                if (page === 1) {
-                    const date = new Date(response[0].commit.author.date)
-                    lastCommitDate = new Intl.DateTimeFormat('de-DE', {
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                    }).format(date)
-                }
+        //         if (page === 1) {
+        //             const date = new Date(response[0].commit.author.date)
+        //             lastCommitDate = new Intl.DateTimeFormat('de-DE', {
+        //                 year: 'numeric',
+        //                 month: '2-digit',
+        //                 day: '2-digit',
+        //                 hour: '2-digit',
+        //                 minute: '2-digit'
+        //             }).format(date)
+        //         }
 
-                page++
-            }
-        }
+        //         page++
+        //     }
+        // }
 
+        // return {
+        //     totalCommits,
+        //     lastCommitDate
+        // }
         return {
-            totalCommits,
-            lastCommitDate
+            token2: config.github.token2
         }
     } catch (error: any) {
         throw createError({
