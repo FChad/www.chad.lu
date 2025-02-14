@@ -108,7 +108,7 @@ useSeo({
                         </div>
 
                         <div class="flex-1 text-center lg:text-left">
-                            <h1 class="text-2xl font-bold mb-2">Feierstein Chad</h1>
+                            <h2 class="text-2xl font-bold mb-2">Feierstein Chad</h2>
                             <div class="flex flex-wrap justify-center lg:justify-start gap-3">
                                 <span
                                     class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm flex items-center gap-1">

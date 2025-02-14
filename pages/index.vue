@@ -31,7 +31,7 @@ useSeo({
         <div class="w-full min-h-full flex items-center justify-center ">
             <div class="flex flex-col items-center justify-center w-full h-full z-[1] overflow-hidden">
                 <div class="flex flex-col gap-10 items-center justify-center overflow-hidden">
-                    <h1 class="p-3 flex flex-col lg:w-full gap-4 items-center justify-center font-bold text-white ">
+                    <h2 class="p-3 flex flex-col lg:w-full gap-4 items-center justify-center font-bold text-white ">
                         <span class="text-xl lg:text-3xl uppercase">
                             {{ $t('home.welcome') }}
                         </span>
@@ -43,7 +43,7 @@ useSeo({
                             </span>
                             {{ $t('home.page') }}
                         </span>
-                    </h1>
+                    </h2>
                     <div class="w-full max-w-[80%] md:max-w-[50%]">
                         <div class="flex flex-col items-center gap-5 rounded-lg p-3 font-bold">
                             <p class="text-lg text-center text-white">

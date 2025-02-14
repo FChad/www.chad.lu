@@ -120,7 +120,7 @@ useSeo({
         <div class="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
             <!-- Page Header -->
             <div class="text-center mb-12">
-                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">{{ t('contact.title') }}</h1>
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">{{ t('contact.title') }}</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                     {{ t('contact.subtitle') }}
                 </p>

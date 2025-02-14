@@ -38,7 +38,7 @@ const projects: Project[] = [
             <!-- Header Card -->
             <div
                 class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
-                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{{ $t('projects.title') }}</h1>
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{{ $t('projects.title') }}</h2>
                 <p class="text-gray-600 dark:text-gray-300">
                     {{ $t('projects.description') }}
                 </p>

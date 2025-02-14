@@ -9,7 +9,7 @@ interface SeoMetaData {
 }
 
 export function useSeo({ title, description, path, image = '/img/og-image.jpg' }: SeoMetaData) {
-    const { t } = useI18n()
+    const { t, locale } = useI18n()
     const baseUrl = 'https://www.chad.lu'
 
     // Create reactive metadata
@@ -28,6 +28,9 @@ export function useSeo({ title, description, path, image = '/img/og-image.jpg' }
     // Use useHead with both client and server modes
     useHead({
         title: meta.title,
+        htmlAttrs: {
+            lang: computed(() => locale.value)
+        },
         meta: [
             {
                 name: 'description',
