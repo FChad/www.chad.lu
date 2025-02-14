@@ -23,6 +23,15 @@ export default defineEventHandler(async (event) => {
 
     try {
         const config = useRuntimeConfig()
+        const token = config.github?.token
+
+        if (!token) {
+            throw createError({
+                statusCode: 500,
+                message: 'GitHub token is not configured'
+            })
+        }
+
         let page = 1
         let totalCommits = 0
         let hasNextPage = true
@@ -33,8 +42,9 @@ export default defineEventHandler(async (event) => {
                 `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${PER_PAGE}&page=${page}`,
                 {
                     headers: {
-                        'Authorization': `Bearer ${config.github.token}`,
-                        'Accept': 'application/vnd.github.v3+json'
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'User-Agent': 'FChad-App'
                     }
                 }
             )
@@ -64,9 +74,11 @@ export default defineEventHandler(async (event) => {
             lastCommitDate
         }
     } catch (error: any) {
+        console.error('GitHub API Error:', error)
         throw createError({
             statusCode: error.statusCode || 500,
-            message: error.message || 'Failed to fetch GitHub stats'
+            message: error.message || 'Failed to fetch GitHub stats',
+            cause: error
         })
     }
 }) 
