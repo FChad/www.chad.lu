@@ -22,12 +22,12 @@
                             <li v-for="link in navLinks" :key="link.name" class="text-base">
                                 <NuxtLink :to="link.to"
                                     class="relative flex items-center gap-2 px-3 py-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
-                                    :class="{ 'text-slate-900 dark:text-white': $route.path === localePath(link.to) }">
+                                    :class="{ 'text-slate-900 dark:text-white': isActiveRoute(link.to) }">
                                     <Icon :name="link.icon" size="20" />
                                     <span>{{ $t(link.name) }}</span>
                                     <span
                                         class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 scale-x-0 transition-transform duration-200"
-                                        :class="{ 'scale-x-100': $route.path === localePath(link.to) }">
+                                        :class="{ 'scale-x-100': isActiveRoute(link.to) }">
                                     </span>
                                 </NuxtLink>
                             </li>
@@ -60,7 +60,7 @@
                     <li v-for="link in navLinks" :key="link.name">
                         <NuxtLink @click="handleModal" :to="link.to"
                             class="grid grid-cols-[48px_1fr_24px] items-center gap-2 p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 group"
-                            :class="{ 'bg-slate-100 dark:bg-slate-800': $route.path === localePath(link.to) }">
+                            :class="{ 'bg-slate-100 dark:bg-slate-800': isActiveRoute(link.to) }">
                             <div
                                 class="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-200 dark:bg-slate-700 group-hover:bg-slate-300 dark:group-hover:bg-slate-600">
                                 <Icon :name="link.icon" size="24" class="text-slate-700 dark:text-slate-200" />
@@ -68,7 +68,7 @@
                             <span class="text-base font-medium">{{ $t(link.name) }}</span>
                             <Icon name="mdi:chevron-right" size="24"
                                 class="text-slate-400 transition-transform group-hover:translate-x-1 justify-self-end"
-                                :class="{ 'text-blue-500': $route.path === localePath(link.to) }" />
+                                :class="{ 'text-blue-500': isActiveRoute(link.to) }" />
                         </NuxtLink>
                     </li>
                 </ul>
@@ -79,14 +79,28 @@
 
 <script setup>
 import { useNavigation } from '~/composables/useNavigation'
-import { useLocalePath } from '#imports'
+import { useLocalePath, useRoute } from '#imports'
+import { useI18n } from 'vue-i18n'
 
+const route = useRoute()
 const localePath = useLocalePath()
+const { locale } = useI18n()
 const { navLinks } = useNavigation()
 const isOpen = ref(false)
 
 const handleModal = () => {
     isOpen.value = !isOpen.value
+}
+
+const isActiveRoute = (path) => {
+    const localizedPath = localePath(path)
+    console.log(localizedPath);
+    // Exact match for home page
+    if (localizedPath === '/' || localizedPath === `/${locale.value}`) {
+        return route.path === localizedPath || route.path === `/${locale.value}`
+    }
+    // For other routes, check if it starts with the path
+    return route.path.startsWith(localizedPath)
 }
 </script>
 
