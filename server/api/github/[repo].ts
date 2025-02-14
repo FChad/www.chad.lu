@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Accept': 'application/vnd.github.v3+json',
-                        'User-Agent': 'FChad-App'
+                        'User-Agent': 'Portfolio-Website'
                     }
                 }
             )
