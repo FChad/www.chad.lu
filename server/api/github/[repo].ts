@@ -1,6 +1,7 @@
 import { defineEventHandler } from 'h3'
 
 export default defineEventHandler(async (event) => {
+    const owner = 'FChad'
     const repo = event.context.params?.repo
     const PER_PAGE = 100
 
@@ -20,7 +21,7 @@ export default defineEventHandler(async (event) => {
 
         while (hasNextPage) {
             const response = await fetch(
-                `https://api.github.com/repos/FChad/${repo}/commits?per_page=${PER_PAGE}&page=${page}`,
+                `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${PER_PAGE}&page=${page}`,
                 {
                     headers: {
                         'Authorization': `Bearer ${config.github.token}`,

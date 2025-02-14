@@ -42,15 +42,8 @@ const { data: githubStats, error } = await useAsyncData<GitHubStats | null>(
     'github-stats',
     async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/github/www.chad.lu')
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`)
-            }
-            const data = await response.json()
-            return {
-                totalCommits: data.totalCommits,
-                lastCommitDate: data.lastCommitDate
-            }
+            const response = await $fetch<GitHubStats>('/api/github/www.chad.lu')
+            return response
         } catch (err) {
             console.error('Error fetching GitHub stats:', err)
             return null
