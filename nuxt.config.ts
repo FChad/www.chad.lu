@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/color-mode', '@nuxtjs/i18n', '@nuxtjs/robots', '@nuxtjs/sitemap'],
+  site: { 
+    url: 'https://www.chad.lu', 
+    name: 'Feierstein Chad - Portfolio' 
+  }, 
   i18n: {
     locales: [
       { code: 'en', language: 'en-US', file: 'en.json' },
