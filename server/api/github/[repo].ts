@@ -1,4 +1,13 @@
 import { defineEventHandler } from 'h3'
+interface GitHubStats {
+    totalCommits: number
+    lastCommitDate: string
+    commit: {
+        author: {
+            date: string
+        }
+    }
+}
 
 export default defineEventHandler(async (event) => {
     const owner = 'FChad'
@@ -20,7 +29,7 @@ export default defineEventHandler(async (event) => {
         let lastCommitDate
 
         while (hasNextPage) {
-            const response = await fetch(
+            const response = await $fetch<GitHubStats[]>(
                 `https://api.github.com/repos/${owner}/${repo}/commits?per_page=${PER_PAGE}&page=${page}`,
                 {
                     headers: {
@@ -30,32 +39,13 @@ export default defineEventHandler(async (event) => {
                 }
             )
 
-            // Prüfe HTTP Status
-            if (!response.ok) {
-                throw createError({
-                    statusCode: response.status,
-                    message: `GitHub API error: ${response.statusText}`
-                })
-            }
-
-            // Prüfe Rate Limit
-            const rateLimit = response.headers.get('x-ratelimit-remaining')
-            if (rateLimit === '0') {
-                throw createError({
-                    statusCode: 429,
-                    message: 'GitHub API rate limit exceeded'
-                })
-            }
-
-            const commits = await response.json()
-
-            if (commits.length === 0) {
+            if (response.length === 0) {
                 hasNextPage = false
             } else {
-                totalCommits += commits.length
+                totalCommits += response.length
 
                 if (page === 1) {
-                    const date = new Date(commits[0].commit.author.date)
+                    const date = new Date(response[0].commit.author.date)
                     lastCommitDate = new Intl.DateTimeFormat('de-DE', {
                         year: 'numeric',
                         month: '2-digit',
