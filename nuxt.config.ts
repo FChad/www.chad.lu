@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     defaultLocale: 'lu',
     lazy: true,
     langDir: 'locales/',
-    strategy: 'prefix_except_default'
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false
   },
   runtimeConfig: {
     resend: {
