@@ -61,7 +61,8 @@ const projects: Project[] = [
                                 {{ $t(project.description) }}
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span v-for="tag in project.tags" :key="tag" class="px-4 py-1 border border-neutral-500 rounded-full text-sm">
+                                <span v-for="tag in project.tags" :key="tag"
+                                    class="px-4 py-1 border border-neutral-500 rounded-full text-sm">
                                     {{ tag }}
                                 </span>
                             </div>

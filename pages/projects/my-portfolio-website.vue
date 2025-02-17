@@ -47,7 +47,7 @@ interface GitHubStats {
     lastCommitDate: string;
 }
 
-const { data: githubStats, error } = await useFetch<GitHubStats>('/api/github/www.chad.lu', {
+const { data: githubStats, error } = await useFetch<GitHubStats>('/api/github/portfolio-website', {
     server: true,
     watch: false,
     onResponseError: (error) => {
@@ -82,7 +82,7 @@ const { data: githubStats, error } = await useFetch<GitHubStats>('/api/github/ww
                                 {{ $t('projects.portfolio.title') }}
                             </h2>
                             <div class="flex gap-4">
-                                <a href="https://github.com/FChad/www.chad.lu" target="_blank" rel="noopener noreferrer"
+                                <a href="https://github.com/FChad/portfolio-website" target="_blank" rel="noopener noreferrer"
                                     class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600">
                                     <Icon icon="mdi:github" class="w-5 h-5 mr-2" />
                                     GitHub
