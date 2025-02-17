@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       { code: 'de', language: 'de-DE', file: 'de.json' },
       { code: 'lu', language: 'lb-LU', file: 'lu.json' }
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'lu',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_except_default'
@@ -25,14 +25,19 @@ export default defineNuxtConfig({
       toEmail: process.env.RESEND_TO_EMAIL
     },
     github: {
-      token: process.env.GITHUB_TOKEN,
-      token2: process.env.GITHUB_TOKEN2
+      token: process.env.GITHUB_TOKEN
     }
   },
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1'
+      viewport: 'width=device-width, initial-scale=1',
+      link: [
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'manifest', href: '/site.webmanifest' }
+      ]
     }
   }
 })
